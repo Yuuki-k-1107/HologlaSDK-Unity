@@ -29,6 +29,8 @@ namespace Hologla
 			Size4,
 			Size5,
 			Size6,
+			Size7,
+			Size8,
 		};
 
 		//表示モード(AR/MR/VR).

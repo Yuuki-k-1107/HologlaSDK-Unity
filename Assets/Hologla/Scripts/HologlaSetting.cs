@@ -23,29 +23,37 @@ namespace Hologla{
 		//設定データのバージョン情報.
 		private static int dataVersion = 1 ;
 
-		//表示領域サイズに対応したビューポートサイズリスト.
-		//以下の機種ごとの画面の高さ、幅情報を元に、一番小さいものを基準に比率によって計算した値を設定しておく.
-		//【iPhone 6S-8】105,59.
-		//【iPhone X-XS】135,62.
-		//【iPhone XR】142,67.
-		//【iPhone 6S-8Plus】121,68.
-		//【iPhone XS Max】149,69.
-		//【iPhone 12Pro Max】155,72.
-		public static readonly ReadOnlyCollection<Vector2> viewportSizeList = new ReadOnlyCollection<Vector2>(new Vector2[]
+        //表示領域サイズに対応したビューポートサイズリスト.
+        //以下の機種ごとの画面の高さ、幅情報を元に、一番小さいものを基準に比率によって計算した値を設定しておく.
+        //【iPhone 6S-8】105,59.
+        //【iPhone X-XS】135,62.
+        //【iPhone XR】142,67.
+        //【iPhone 6S-8Plus】121,68.
+        //【iPhone 16Pro】h,w.
+        //【iPhone XS Max】149,69.
+        //【iPhone 12Pro Max】155,72.
+        //【iPhone 16Pro Max】h,w.
+        public static readonly ReadOnlyCollection<Vector2> viewportSizeList = new ReadOnlyCollection<Vector2>(new Vector2[]
 #if UNITY_ANDROID
 			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f),
 			new Vector2(0.5f * 0.945945946f, 1.0f * 0.936507937f),
 			new Vector2(0.5f * 0.8203125f, 1.0f * 0.951612903f),
 			new Vector2(0.5f * 0.833333333f, 1.0f * 0.819444444f),
+            new Vector2(0.5f * 0.777777778f, 1.0f * 0.837000001f),
 			new Vector2(0.5f * 0.734265734f, 1.0f * 0.855072464f),
-			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),});
+			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),
+			new Vector2(0.5f * 0.65f, 1.0f * 0.8f),
+			});
 #else
-			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f),
+			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f), // 
 			new Vector2(0.5f * 0.777777778f, 1.0f * 0.951612903f),
 			new Vector2(0.5f * 0.73943662f, 1.0f * 0.880597015f),
 			new Vector2(0.5f * 0.867768595f, 1.0f * 0.867647059f),
-			new Vector2(0.5f * 0.704697987f, 1.0f * 0.855072464f),
-			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),});
+            new Vector2(0.5f * 0.7f, 1.0f * 0.837f),
+            new Vector2(0.5f * 0.704697987f, 1.0f * 0.855072464f),
+			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),
+			new Vector2(0.5f * 0.65f, 1.0f * 0.8f),
+            });
 #endif
 
 		private const string SETTING_KEY_DATA_VERSION = "Hologla_DataVersion" ;

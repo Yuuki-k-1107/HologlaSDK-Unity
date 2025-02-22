@@ -27,10 +27,14 @@ public class DanglaMenuSample : MonoBehaviour {
 		{"_SingleEye",
 		"_TwoEye",}) ;
 	private static readonly ReadOnlyCollection<string> VIEW_SIZE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
-		{"_Small",
-		"_Mid",
-		"_Big",
-		"_ExBig",}) ;
+		{"_Size1", // 4.7 inch
+		"_Size2", // 5.4 inch
+		"_Size3", // 5.8 inch
+        "_Size4", // 6.1 inch
+        "_Size5", // 6.3 inch
+        "_Size6", // 6.5 inch
+        "_Size7", // 6.7 inch
+        "_Size8",}) ; // 6.9 inch
 	private const string GAME_LAUNCH_ITEM_NAME = "_Game" ;
 	private const string MENU_LAUNCH_ITEM_NAME = "_Menu" ;
 
@@ -214,7 +218,9 @@ public class DanglaMenuSample : MonoBehaviour {
 	public void SwitchViewSize3( ){if( null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size3);}}
 	public void SwitchViewSize4( ){if( null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size4);}}
 	public void SwitchViewSize5( ){if( null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size5);}}
-	public void SwitchViewSize6( ){if( null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size6);}}
+    public void SwitchViewSize6( ){if (null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size6);}}
+    public void SwitchViewSize7( ){if (null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size7);}}
+    public void SwitchViewSize8( ){if( null != hologlaManager ){hologlaManager.SwitchViewSize(HologlaCameraManager.ViewSize.Size8);}}
 	#endregion
 	//瞳孔間距離の設定.
 	public void AddIPD(float addValue){if( null != hologlaManager ){hologlaManager.AddIPD(addValue);}}
