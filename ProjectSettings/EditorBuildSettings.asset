@@ -24,5 +24,7 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 4d905d6eea3f54e4a924416ce389a9e5,
       type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 093d561eb4eb6934f984512e200310bf,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1de9c33f3ebd0f048a476714fc5e3951,
       type: 2}
