@@ -136,12 +136,12 @@ public class DanglaMenuSample : MonoBehaviour {
 	}
 
 	//現在のIPD値表示テキストを更新する.
-	public void UpdateIPDText( )
+	public void UpdateIPDText(TextMesh ipdTextMesh)
 	{
-		if( null == ipdTextObj || null == hologlaManager ){
+		if( null == ipdTextMesh || null == hologlaManager ){
 			return;
 		}
-		ipdTextObj.text = string.Format("{0:.0}mm", hologlaManager.InterpupillaryDistance);
+		ipdTextMesh.text = string.Format("{0:.0}mm\nDecision", hologlaManager.InterpupillaryDistance);
 
 		return;
 	}

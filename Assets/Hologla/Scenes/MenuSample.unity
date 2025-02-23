@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657695, g: 0.49641138, b: 0.5748176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,6 +238,51 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114031426956402144, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114095299710499498, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114753710008318434, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114763210166483696, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114834181410512306, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114914876983688900, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 114947716064502290, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 5177906476159458805, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: b2dc58dba88e4094da32e6329e42b37b, type: 2}
+    - target: {fileID: 5177906476159458805, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onGazeDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: d4768ff5156b8794b9af9ca0f94a1f9e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
 --- !u!1 &559168737
