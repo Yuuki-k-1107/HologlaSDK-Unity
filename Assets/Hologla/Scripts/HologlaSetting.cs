@@ -25,34 +25,35 @@ namespace Hologla{
 
         //表示領域サイズに対応したビューポートサイズリスト.
         //以下の機種ごとの画面の高さ、幅情報を元に、一番小さいものを基準に比率によって計算した値を設定しておく.
+		// iPhone16シリーズのサイズについては公式の情報(解像度・ppi)を基に算出
         //【iPhone 6S-8】105,59.
         //【iPhone X-XS】135,62.
         //【iPhone XR】142,67.
         //【iPhone 6S-8Plus】121,68.
-        //【iPhone 16Pro】h,w.
+        //【iPhone 16Pro】145,66.(14.478cm, 6.65921739cm)
         //【iPhone XS Max】149,69.
         //【iPhone 12Pro Max】155,72.
-        //【iPhone 16Pro Max】h,w.
+        //【iPhone 16Pro Max】158,73.(15.8363478cm, 7.28869565cm)
         public static readonly ReadOnlyCollection<Vector2> viewportSizeList = new ReadOnlyCollection<Vector2>(new Vector2[]
 #if UNITY_ANDROID
 			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f),
 			new Vector2(0.5f * 0.945945946f, 1.0f * 0.936507937f),
 			new Vector2(0.5f * 0.8203125f, 1.0f * 0.951612903f),
 			new Vector2(0.5f * 0.833333333f, 1.0f * 0.819444444f),
-            new Vector2(0.5f * 0.777777778f, 1.0f * 0.837000001f),
+            new Vector2(0.5f * 0.724137931f, 1.0f * 0.893939394f),
 			new Vector2(0.5f * 0.734265734f, 1.0f * 0.855072464f),
 			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),
-			new Vector2(0.5f * 0.65f, 1.0f * 0.8f),
+			new Vector2(0.5f * 0.664556962f, 1.0f * 0.808219178f),
 			});
 #else
-			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f), // 
-			new Vector2(0.5f * 0.777777778f, 1.0f * 0.951612903f),
-			new Vector2(0.5f * 0.73943662f, 1.0f * 0.880597015f),
-			new Vector2(0.5f * 0.867768595f, 1.0f * 0.867647059f),
-            new Vector2(0.5f * 0.7f, 1.0f * 0.837f),
-            new Vector2(0.5f * 0.704697987f, 1.0f * 0.855072464f),
-			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f),
-			new Vector2(0.5f * 0.65f, 1.0f * 0.8f),
+			{new Vector2(0.5f * 1.0f, 1.0f * 1.0f),                // 4.7 inch
+			new Vector2(0.5f * 0.777777778f, 1.0f * 0.951612903f), // 5.4 inch
+			new Vector2(0.5f * 0.73943662f, 1.0f * 0.880597015f),  // 5.8 inch
+			new Vector2(0.5f * 0.867768595f, 1.0f * 0.867647059f), // 6.1 inch
+            new Vector2(0.5f * 0.724137931f, 1.0f * 0.893939394f), // 6.3 inch
+            new Vector2(0.5f * 0.704697987f, 1.0f * 0.855072464f), // 6.5 inch
+			new Vector2(0.5f * 0.677419355f, 1.0f * 0.819444444f), // 6.7 inch
+			new Vector2(0.5f * 0.664556962f, 1.0f * 0.808219178f), // 6.9 inch
             });
 #endif
 
