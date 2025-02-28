@@ -9837,7 +9837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1861468072219159156
 Transform:
   m_ObjectHideFlags: 0
@@ -14198,7 +14198,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9d666acdce88c3a4ea865d22a6add6d6, type: 2}
+      objectReference: {fileID: 2100000, guid: 945dda9c4d2a91049a128bcc9c19d2d6, type: 2}
     - target: {fileID: 114537268276431102, guid: aada6bece0a0cbf4697f047108a5adff,
         type: 3}
       propertyPath: onGazeSelect.m_PersistentCalls.m_Calls.Array.size

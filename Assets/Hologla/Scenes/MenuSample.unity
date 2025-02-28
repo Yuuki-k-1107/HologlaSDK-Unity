@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: onGazeDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2100000, guid: d4768ff5156b8794b9af9ca0f94a1f9e, type: 2}
+    - target: {fileID: 8524477879182819219, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
