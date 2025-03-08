@@ -15,7 +15,7 @@ C:/Users/yuuki/Downloads/HologlaSDK-Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51400
+64677
 Successfully changed project path to: C:/Users/yuuki/Downloads/HologlaSDK-Unity
 C:/Users/yuuki/Downloads/HologlaSDK-Unity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/yuuki/Downloads/HologlaSDK-Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12924] Host "[IP] 192.168.3.6 [Port] 0 [Flags] 2 [Guid] 1587291986 [EditorId] 1587291986 [Version] 1048832 [Id] WindowsEditor(7,MySPECTRE14) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [42936] Host "[IP] 172.20.10.13 [Port] 0 [Flags] 2 [Guid] 1356556072 [EditorId] 1356556072 [Version] 1048832 [Id] WindowsEditor(7,MySPECTRE14) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12924] Host "[IP] 192.168.3.6 [Port] 0 [Flags] 2 [Guid] 1587291986 [EditorId] 1587291986 [Version] 1048832 [Id] WindowsEditor(7,MySPECTRE14) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [42936] Host "[IP] 172.20.10.13 [Port] 0 [Flags] 2 [Guid] 1356556072 [EditorId] 1356556072 [Version] 1048832 [Id] WindowsEditor(7,MySPECTRE14) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 46.43 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 97.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1 (4fc78088f837)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -70,52 +70,60 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.054148 seconds.
-- Loaded All Assemblies, in  1.744 seconds
+Registered in 0.012149 seconds.
+- Loaded All Assemblies, in  0.815 seconds
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
-Native extension for iOS target not found
 [usbmuxd] Send listen message
+Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 3214 ms
+Win32Exception: „Åì„ÅÆÊìç‰Ωú„ÇíÊ≠£„Åó„ÅèÁµÇ‰∫Ü„Åó„Åæ„Åó„Åü„ÄÇ
+  at System.Diagnostics.Process.Kill () [0x00018] in <0176c56e11184037ab8bba48ad8e5607>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Kill()
+  at UnityEditor.Android.AndroidDeploymentTargetsExtension.GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext context, UnityEditor.ProgressHandler progressHandler) [0x0014a] in <6542399aa1cb4f1c8de3e43116fd1b96>:0 
+  at UnityEditor.Android.TargetScanWorker.ScanSync () [0x00039] in <6542399aa1cb4f1c8de3e43116fd1b96>:0 
+  at UnityEditor.Android.TargetExtension.OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[] usbDevices) [0x00081] in <6542399aa1cb4f1c8de3e43116fd1b96>:0 
+  at UnityEditor.Android.TargetExtension.OnLoad () [0x000ad] in <6542399aa1cb4f1c8de3e43116fd1b96>:0 
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <5e6ebaa7d75c4d5399dc81ecead6b43f>:0 
+
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.932 seconds
-Domain Reload Profiling: 6666ms
-	BeginReloadAssembly (552ms)
+- Finished resetting the current domain, in  0.888 seconds
+Domain Reload Profiling: 1701ms
+	BeginReloadAssembly (341ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (129ms)
-	RebuildNativeTypeToScriptingClass (36ms)
-	initialDomainReloadingComplete (355ms)
-	LoadAllAssembliesAndSetupDomain (660ms)
-		LoadAssemblies (545ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (100ms)
+	LoadAllAssembliesAndSetupDomain (289ms)
+		LoadAssemblies (341ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (649ms)
-			TypeCache.Refresh (644ms)
-				TypeCache.ScanAssembly (600ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (281ms)
+				TypeCache.ScanAssembly (253ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (4936ms)
+	FinalizeReload (888ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4624ms)
+		SetupLoadedEditorAssemblies (798ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3959ms)
-			SetLoadedEditorAssemblies (14ms)
+			InitializePlatformSupportModulesInManaged (589ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (12ms)
-			ProcessInitializeOnLoadAttributes (493ms)
-			ProcessInitializeOnLoadMethodAttributes (145ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (150ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -124,8 +132,8 @@ Domain Reload Profiling: 6666ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.168 seconds
-Refreshing native plugins compatible for Editor in 71.84 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.108 seconds
+Refreshing native plugins compatible for Editor in 13.47 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -143,47 +151,47 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  3.205 seconds
-Domain Reload Profiling: 5366ms
-	BeginReloadAssembly (398ms)
+- Finished resetting the current domain, in  1.976 seconds
+Domain Reload Profiling: 3071ms
+	BeginReloadAssembly (187ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (107ms)
-	RebuildNativeTypeToScriptingClass (42ms)
-	initialDomainReloadingComplete (122ms)
-	LoadAllAssembliesAndSetupDomain (1488ms)
-		LoadAssemblies (1197ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (788ms)
+		LoadAssemblies (650ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (559ms)
-			TypeCache.Refresh (427ms)
-				TypeCache.ScanAssembly (370ms)
-			ScanForSourceGeneratedMonoScriptInfo (111ms)
-			ResolveRequiredComponents (18ms)
-	FinalizeReload (3208ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (202ms)
+				TypeCache.ScanAssembly (173ms)
+			ScanForSourceGeneratedMonoScriptInfo (34ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1977ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2677ms)
+		SetupLoadedEditorAssemblies (1687ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (95ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (97ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (216ms)
-			ProcessInitializeOnLoadAttributes (1726ms)
-			ProcessInitializeOnLoadMethodAttributes (602ms)
-			AfterProcessingInitializeOnLoad (26ms)
-			EditorAssembliesLoaded (2ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (1131ms)
+			ProcessInitializeOnLoadMethodAttributes (323ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.43 seconds
-Refreshing native plugins compatible for Editor in 56.15 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 19.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3893 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 96 unused Assets / (2.2 MB). Loaded Objects now: 4332.
-Memory consumption went from 157.9 MB to 155.7 MB.
-Total: 37.222700 ms (FindLiveObjects: 0.854900 ms CreateObjectMapping: 0.495100 ms MarkObjects: 32.311000 ms  DeleteObjects: 3.558800 ms)
+Unloading 96 unused Assets / (2.3 MB). Loaded Objects now: 4332.
+Memory consumption went from 157.5 MB to 155.2 MB.
+Total: 19.852600 ms (FindLiveObjects: 0.522700 ms CreateObjectMapping: 0.291100 ms MarkObjects: 17.572500 ms  DeleteObjects: 1.464300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -201,69 +209,444 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 92178.244378 seconds.
+  Time since last request: 163293.009494 seconds.
+  path: Assets/Hologla/Materials/Yellow.mat
+  artifactKey: Guid(b081ac8482902dc4b86df7ebb5659707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/Yellow.mat using Guid(b081ac8482902dc4b86df7ebb5659707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4023ef310f1c33415cff0aa09780181') in 0.186597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
   path: Assets/Hologla/Materials/Red.mat
-  artifactKey: Guid(0cc23cbe4f075984481c2b68ced7d0be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Materials/Red.mat using Guid(0cc23cbe4f075984481c2b68ced7d0be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5f5d78a0f8ddfb106ab66dfa1e5d5f20') in 0.345719 seconds
+  artifactKey: Guid(0cc23cbe4f075984481c2b68ced7d0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/Red.mat using Guid(0cc23cbe4f075984481c2b68ced7d0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0b4bfc72854f6e4aca749ea8218bdf3') in 0.049176 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000072 seconds.
-  path: Assets/Hologla/Animation/SystemMenu/System_TopMenuIn.anim
-  artifactKey: Guid(696778333f37a904ab3b886411159549) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Animation/SystemMenu/System_TopMenuIn.anim using Guid(696778333f37a904ab3b886411159549) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2d2173409edcbd7bfa0914ea5e775860') in 0.087201 seconds
+  Time since last request: 3.140210 seconds.
+  path: Assets/Hologla/Materials/WhiteUnlit.mat
+  artifactKey: Guid(70ed83f988e89844ba4f8c5f862c2d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/WhiteUnlit.mat using Guid(70ed83f988e89844ba4f8c5f862c2d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e0042cc08cd80dd362b0e580f019efe') in 0.051523 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001068 seconds.
-  path: Assets/Hologla/Animation/SystemMenu/System_TopMenuOut.anim
-  artifactKey: Guid(017ea5c05d73492498aea6137fd906b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Animation/SystemMenu/System_TopMenuOut.anim using Guid(017ea5c05d73492498aea6137fd906b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6dcafb53674494508bb4d241aaaf5363') in 0.072003 seconds
+  Time since last request: 42.985711 seconds.
+  path: Assets/Hologla/Materials/SelectUnlit.mat
+  artifactKey: Guid(5074ce60425a6d6489a9a3051e3c46e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/SelectUnlit.mat using Guid(5074ce60425a6d6489a9a3051e3c46e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7ddf53d6b47137ac1a3c67f1ff210f') in 0.050367 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Hologla/Scenes/MenuSample.unity
-  artifactKey: Guid(c497c6e0f8f4af741b569cd9ce555b4a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Scenes/MenuSample.unity using Guid(c497c6e0f8f4af741b569cd9ce555b4a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3ff27a2eaaffede12a38b76f0f91b091') in 0.043249 seconds
+  Time since last request: 87.349877 seconds.
+  path: Assets/Hologla/Prefabs/HologlaCameraParent.prefab
+  artifactKey: Guid(3a50cbb25f06c4f4e8b51f2edbe41672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/HologlaCameraParent.prefab using Guid(3a50cbb25f06c4f4e8b51f2edbe41672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0162ee085b85db54f6daaed45aafb5fd') in 0.108844 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 177.504335 seconds.
+  path: Assets/Hologla/Prefabs/Samples
+  artifactKey: Guid(afe376df5bffec9438ddb263250e5d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples using Guid(afe376df5bffec9438ddb263250e5d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd88166fe2bc48c940826670344b2c8b') in 0.002162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.196748 seconds.
+  path: Assets/Hologla/Prefabs/Samples/BlockItem.prefab
+  artifactKey: Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/BlockItem.prefab using Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520a3aaff75ef2ecfd884111ada94a2b') in 0.046185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b81072d1ce05caa8153704fb700a51') in 0.124271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 461
+========================================================================
+Received Import Request.
+  Time since last request: 134.261159 seconds.
+  path: Assets/Hologla/Materials/Logo/holob.mat
+  artifactKey: Guid(575c216ffdef148a8b116496aaca271b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/Logo/holob.mat using Guid(575c216ffdef148a8b116496aaca271b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc904fa30108e04ec1aafa549541c023') in 0.068120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Hologla/Materials/Logo/imageLicenseLogo.mat
+  artifactKey: Guid(06a2f91e5c1e74573b5abc91f8ad6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/Logo/imageLicenseLogo.mat using Guid(06a2f91e5c1e74573b5abc91f8ad6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caba39c82245194c9a776f2f228418de') in 0.031356 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Hologla/Scripts/Samples/DanglaMenuSample.cs
-  artifactKey: Guid(3a7af989497352e48953da3a9856a460) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Scripts/Samples/DanglaMenuSample.cs using Guid(3a7af989497352e48953da3a9856a460) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '99f51b2e8693ae2fea2cb9bc70240284') in 0.054224 seconds
+  Time since last request: 1.090108 seconds.
+  path: Assets/Hologla/Prefabs/Samples/BlockItem.prefab
+  artifactKey: Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/BlockItem.prefab using Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012124350a5ac3bb78f83cb46fccfc9d') in 0.030082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 5.997790 seconds.
+  path: Assets/Hologla/Prefabs/Samples/BlockItem.prefab
+  artifactKey: Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/BlockItem.prefab using Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21dac18aaac7ae5dee81de17b067dc67') in 0.033903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 6.581326 seconds.
+  path: Assets/Hologla/Prefabs/Samples/BlockItem.prefab
+  artifactKey: Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/BlockItem.prefab using Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99eb268995d521498d931e555570fd8c') in 0.031659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 3.314126 seconds.
+  path: Assets/Hologla/Prefabs/Samples/BlockItem.prefab
+  artifactKey: Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/BlockItem.prefab using Guid(aada6bece0a0cbf4697f047108a5adff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3426e4dc963943676a6ae406edba69f3') in 0.042350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 16.569987 seconds.
+  path: Assets/Hologla/Materials/SelectUnlit.mat
+  artifactKey: Guid(5074ce60425a6d6489a9a3051e3c46e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Materials/SelectUnlit.mat using Guid(5074ce60425a6d6489a9a3051e3c46e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e398cf4da640e5f9cf1f97a586eb1c9') in 0.041219 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Hologla/Scripts/HologlaCameraManager.cs
-  artifactKey: Guid(cfa718f10d5dabf4e9c8927a6f03b7e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Scripts/HologlaCameraManager.cs using Guid(cfa718f10d5dabf4e9c8927a6f03b7e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4253db4974db6e58fc9c66f1b9111e18') in 0.063427 seconds
+  Time since last request: 2.713801 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '798d88ae55cc4d0450df2939715b4691') in 0.072073 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 462
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001284 seconds.
-  path: Assets/Hologla/Animation/SystemMenu/System_AllMenuHide.anim
-  artifactKey: Guid(62c0df2415e573c4cbc39b58a4762267) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Hologla/Animation/SystemMenu/System_AllMenuHide.anim using Guid(62c0df2415e573c4cbc39b58a4762267) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '299df04863c5ef5daaa8f71378b59eb9') in 0.104424 seconds
+  Time since last request: 3.577649 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9de3a68184fc40ba13b7fb3fb5ac3852') in 0.069578 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ÉXÉåÉbÉhÇÃèIóπÇ‹ÇΩÇÕÉAÉvÉäÉPÅ[ÉVÉáÉìÇÃóvãÅÇ…ÇÊÇ¡ÇƒÅAI/O èàóùÇÕíÜé~Ç≥ÇÍÇ‹ÇµÇΩÅB
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 463
+========================================================================
+Received Import Request.
+  Time since last request: 4.839303 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feed87a714ef4742d7ae699d9c1922a3') in 0.073217 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 463
+========================================================================
+Received Import Request.
+  Time since last request: 8.773819 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f5c82021c07a5e31c97cb78afb5a58') in 0.071106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 463
+========================================================================
+Received Import Request.
+  Time since last request: 47.675444 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae36eb950ed18896678c3957afce89e2') in 0.090396 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 463
+========================================================================
+Received Import Request.
+  Time since last request: 2.678441 seconds.
+  path: Assets/Hologla/Prefabs/Samples/PlayMenu.prefab
+  artifactKey: Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/PlayMenu.prefab using Guid(8652f069ed7643549ba7fcc0bacdb7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5700043510c89a806c825fd8ad3666c') in 0.074282 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 463
+========================================================================
+Received Import Request.
+  Time since last request: 20.376946 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14dceb745f7051d77428ea0f0280541') in 0.080996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 424
+========================================================================
+Received Import Request.
+  Time since last request: 2.942321 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40f5b08a6a2d70384575e4fb14db018') in 0.075687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 4.580858 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc50ea3edd6ca4035037dff8440d5802') in 0.080751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 7.250955 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489eb879911f9268819532a35be347c8') in 0.077031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 2.962961 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92d5dd3787fc307ea0eabb1da3feecf') in 0.076647 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 2.813054 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c77d7e226c11fd1c16ec45cb081d1f7') in 0.089262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 6.219913 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb9b2f114a212683130a5c827c52d67') in 0.081826 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.218439 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c32248b094c91ebd7d65fea7f9bdae5') in 0.078529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.017055 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4c2aae135dbf14cf30f788297a6e90') in 0.081670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 6.030146 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2364cabf1ffcacff0283a1d611fecc78') in 0.081443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.224826 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f2feeda45e6247495e5606457141cb') in 0.071295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.715238 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6c02ef437bb17a1ca61b8961c8f247') in 0.074694 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 7.517366 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5762180e1b761849313ef95cc01d0008') in 0.093042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.009731 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7edc8e9bebb147971cb75cad18a98a21') in 0.079577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 5.884420 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd096ff4929feeb9a7c13391ec09e9615') in 0.082997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 2.458522 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ca8d6f3ecaeef9054e4a1af55208fa') in 0.073214 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.283442 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fa4778647ba5744a5fab813c8fa9339') in 0.078076 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 6.300672 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f0d6ddbb79dfb429936b225afa8ce3') in 0.118484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 2.798113 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d694e30c7f753e2552443a196d9b2ab') in 0.084057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 2.461597 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0367332c65307d3a8513e74b36aae9cf') in 0.090397 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 5.123456 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c84ed973b20ca60267174c7790b64d') in 0.086451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 3.903890 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bc3f971f4fa39d9c8d1945b3e46139') in 0.092575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 5.992717 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5201fa34f72b5b12902def1e8f55d7e0') in 0.073345 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 63.088451 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5944cad5eda69e1d1f7d58d54d2f560') in 0.094006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Import Request.
+  Time since last request: 17.489281 seconds.
+  path: Assets/Hologla/Prefabs/Samples/MenuListSample.prefab
+  artifactKey: Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hologla/Prefabs/Samples/MenuListSample.prefab using Guid(a2c4685d09c141c46a990cffd6bf7259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40261d19b632ca44dccc8062bde81a1') in 0.090279 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 425
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.748 seconds
+Refreshing native plugins compatible for Editor in 14.55 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  2.661 seconds
+Domain Reload Profiling: 5406ms
+	BeginReloadAssembly (2000ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (111ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (614ms)
+		LoadAssemblies (748ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (2662ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1233ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (111ms)
+			ProcessInitializeOnLoadAttributes (795ms)
+			ProcessInitializeOnLoadMethodAttributes (253ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 18.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3876 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (2.3 MB). Loaded Objects now: 4384.
+Memory consumption went from 158.1 MB to 155.8 MB.
+Total: 13.000700 ms (FindLiveObjects: 0.982000 ms CreateObjectMapping: 0.778500 ms MarkObjects: 9.876900 ms  DeleteObjects: 1.361500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

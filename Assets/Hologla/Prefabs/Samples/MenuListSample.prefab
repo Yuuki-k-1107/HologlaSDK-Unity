@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000288857099788}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4459559640381824}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23092909292293812
 MeshRenderer:
@@ -43,10 +44,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -71,6 +74,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102495798549065304
 TextMesh:
   serializedVersion: 3
@@ -120,14 +124,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042437423790870}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: -0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4085967625402502}
   - {fileID: 4167430579249116}
   m_Father: {fileID: 4454555485519252}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!33 &33366431410758746
 MeshFilter:
@@ -145,9 +150,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042437423790870}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23247472253802424
@@ -161,14 +174,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,6 +204,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114888899302643592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,10 +221,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23247472253802424}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -220,11 +237,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23247472253802424}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -235,6 +253,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -249,6 +268,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchLaunchGameScene
         m_Mode: 6
         m_Arguments:
@@ -260,6 +280,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -276,7 +297,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1320848247389294}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1054716467721402
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,15 +326,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054716467721402}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4405564845553842}
   - {fileID: 4242884834626120}
   - {fileID: 4039091969731602}
   m_Father: {fileID: 4560738352949260}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060546294729268
 GameObject:
@@ -335,12 +362,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060546294729268}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.06, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4249483794812880}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23469613925541522
 MeshRenderer:
@@ -353,10 +381,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -381,6 +411,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102050592835248180
 TextMesh:
   serializedVersion: 3
@@ -430,13 +461,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078740545149196}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.275, y: 0.85, z: -0.375}
   m_LocalScale: {x: 0.5, y: 0.6, z: 0.24999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4763690900054466}
   m_Father: {fileID: 4848497887229884}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33968653843899970
 MeshFilter:
@@ -454,9 +486,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078740545149196}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23905283378877314
@@ -470,14 +510,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -498,6 +540,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114453242711493540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,10 +557,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23905283378877314}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -529,11 +573,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23905283378877314}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -544,6 +589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -558,6 +604,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: AddIPD
         m_Mode: 4
         m_Arguments:
@@ -569,6 +616,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateIPDText
         m_Mode: 1
         m_Arguments:
@@ -585,7 +633,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1094579811662800
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,14 +666,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094579811662800}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.60876137, z: 0, w: 0.7933534}
   m_LocalPosition: {x: 2, y: 0, z: -1.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4568053503469888}
   - {fileID: 4711540554054296}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 75, z: 0}
 --- !u!33 &33570225502198316
 MeshFilter:
@@ -638,9 +692,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094579811662800}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23952419886236960
@@ -654,14 +716,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -682,6 +746,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114753710008318434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,10 +763,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23952419886236960}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -713,11 +779,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23952419886236960}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -731,6 +798,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -742,6 +810,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -758,7 +827,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1241011303504292}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1097018619643108
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,12 +859,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097018619643108}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4012132956456342}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33590515582165126
 MeshFilter:
@@ -808,9 +883,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097018619643108}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23986703530632028
@@ -824,10 +907,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -852,6 +937,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1101666445320662
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,15 +965,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101666445320662}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.3, z: -0.5}
   m_LocalScale: {x: 0.6, y: 0.4, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4515211256632326}
   - {fileID: 4853561876341290}
   - {fileID: 4503977186049274}
   m_Father: {fileID: 4560738352949260}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33352662769194562
 MeshFilter:
@@ -905,9 +992,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101666445320662}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23813315374478794
@@ -921,14 +1016,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -949,6 +1046,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114261616281612570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,10 +1063,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23813315374478794}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -980,11 +1079,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23813315374478794}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -995,6 +1095,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -1009,6 +1110,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -1020,6 +1122,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -1031,6 +1134,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -1047,7 +1151,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1103373868842116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,12 +1184,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103373868842116}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.415, z: -0.097}
   m_LocalScale: {x: 0.22, y: 0.2, z: 0.02}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &33280627915161514
 MeshFilter:
@@ -1098,9 +1208,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103373868842116}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23029457266698888
@@ -1114,10 +1232,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1142,6 +1262,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114418390398039178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1279,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23029457266698888}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
@@ -1173,6 +1295,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23029457266698888}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
@@ -1191,6 +1314,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UrlUp
         m_Mode: 5
         m_Arguments:
@@ -1207,7 +1331,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1104197112374316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,12 +1362,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104197112374316}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4109902798637442}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23302227302030172
 MeshRenderer:
@@ -1251,10 +1381,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1279,6 +1411,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102191987091192910
 TextMesh:
   serializedVersion: 3
@@ -1326,12 +1459,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116924928550704}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.06, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4845565089039770}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23576128253432644
 MeshRenderer:
@@ -1344,10 +1478,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1372,6 +1508,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102847604129190016
 TextMesh:
   serializedVersion: 3
@@ -1423,14 +1560,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137309613145634}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4630556818880144}
   - {fileID: 4599626578283772}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!33 &33589531116942850
 MeshFilter:
@@ -1448,9 +1586,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137309613145634}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23473057710437054
@@ -1464,14 +1610,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1492,6 +1640,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114763210166483696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,10 +1657,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23473057710437054}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -1523,11 +1673,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23473057710437054}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1541,6 +1692,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewModeVR
         m_Mode: 1
         m_Arguments:
@@ -1552,6 +1704,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -1563,6 +1716,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchScene
         m_Mode: 5
         m_Arguments:
@@ -1579,7 +1733,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1182224349427690}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1159320418836260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,12 +1764,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159320418836260}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4437626638087434}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23489836188398320
 MeshRenderer:
@@ -1623,10 +1783,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1651,6 +1813,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102684764286870608
 TextMesh:
   serializedVersion: 3
@@ -1698,12 +1861,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170291726520514}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4916982844051038}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23493508173200542
 MeshRenderer:
@@ -1716,10 +1880,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1744,6 +1910,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102404010099232866
 TextMesh:
   serializedVersion: 3
@@ -1792,12 +1959,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182224349427690}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4663018993641010}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33929947914718848
 MeshFilter:
@@ -1815,9 +1983,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182224349427690}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23632376099366924
@@ -1831,10 +2007,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1859,6 +2037,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1185269716997590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,12 +2064,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185269716997590}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4700488059217058}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33336900585990648
 MeshFilter:
@@ -1908,9 +2088,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185269716997590}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23194705028196066
@@ -1924,10 +2112,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1952,6 +2142,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1189483396901062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,12 +2169,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189483396901062}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4781540707400606}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33554347920831074
 MeshFilter:
@@ -2001,9 +2193,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189483396901062}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23899038560276166
@@ -2017,10 +2217,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2045,6 +2247,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1241011303504292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,12 +2274,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241011303504292}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4249483794812880}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33899112210733986
 MeshFilter:
@@ -2094,9 +2298,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241011303504292}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23258339089687364
@@ -2110,10 +2322,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2138,6 +2352,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1281128404277168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,12 +2379,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281128404277168}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4400569841263786}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33740693522795802
 MeshFilter:
@@ -2187,9 +2403,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281128404277168}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23325708906170828
@@ -2203,10 +2427,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2231,6 +2457,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1285914316214154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,12 +2483,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285914316214154}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4781540707400606}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23889512410548662
 MeshRenderer:
@@ -2274,10 +2502,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2302,6 +2532,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102067313008946092
 TextMesh:
   serializedVersion: 3
@@ -2349,12 +2580,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291032313162232}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.06, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4930551918177452}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23297802118962580
 MeshRenderer:
@@ -2367,10 +2599,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2395,6 +2629,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102890163959345038
 TextMesh:
   serializedVersion: 3
@@ -2443,12 +2678,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296617998282948}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4930551918177452}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33536384666451382
 MeshFilter:
@@ -2466,9 +2702,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296617998282948}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23394642234932732
@@ -2482,10 +2726,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2510,6 +2756,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1305264079579612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,12 +2783,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305264079579612}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4654950291744588}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33288826436450358
 MeshFilter:
@@ -2559,9 +2807,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305264079579612}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23685754722703758
@@ -2575,10 +2831,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2603,6 +2861,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1315158687776164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,13 +2889,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315158687776164}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.2, z: -0.15}
   m_LocalScale: {x: 0.4, y: 0.25, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4799097126405018}
   m_Father: {fileID: 4470242664006288}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33464194865644394
 MeshFilter:
@@ -2654,9 +2914,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315158687776164}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23303809362855762
@@ -2670,10 +2938,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2698,6 +2968,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114470014742873456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2714,6 +2985,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23303809362855762}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
@@ -2729,6 +3001,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23303809362855762}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
@@ -2744,6 +3017,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -2758,6 +3032,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -2769,6 +3044,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -2780,6 +3056,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -2796,7 +3073,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1320848247389294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,12 +3105,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320848247389294}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4826755087168800}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33489649337115560
 MeshFilter:
@@ -2846,9 +3129,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320848247389294}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23833542996116808
@@ -2862,10 +3153,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2890,6 +3183,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1324626194194082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,12 +3210,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324626194194082}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4249424012121154}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33993255402920642
 MeshFilter:
@@ -2939,9 +3234,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324626194194082}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23703694360582882
@@ -2955,10 +3258,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2983,6 +3288,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1358043635596166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,14 +3316,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358043635596166}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: -0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4620145098791448}
   - {fileID: 4772541412569754}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!33 &33106619664767012
 MeshFilter:
@@ -3035,9 +3342,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358043635596166}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23499821218799412
@@ -3051,14 +3366,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3079,6 +3396,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114834181410512306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,10 +3413,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23499821218799412}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -3110,11 +3429,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23499821218799412}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3128,6 +3448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -3144,7 +3465,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1097018619643108}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1360536450260316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,12 +3496,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360536450260316}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4663018993641010}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23428687778022360
 MeshRenderer:
@@ -3188,10 +3515,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3216,6 +3545,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102509919320692334
 TextMesh:
   serializedVersion: 3
@@ -3265,14 +3595,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412087798729328}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 1.5, y: 0, z: -0.75}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4281441002887458}
   - {fileID: 4544065050023800}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!33 &33667630619750988
 MeshFilter:
@@ -3290,9 +3621,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412087798729328}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23406945625706206
@@ -3306,14 +3645,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3334,6 +3675,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114419339925396582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,10 +3692,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23406945625706206}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -3365,11 +3708,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23406945625706206}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3380,6 +3724,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -3394,6 +3739,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize5
         m_Mode: 1
         m_Arguments:
@@ -3405,6 +3751,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -3421,7 +3768,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1539240329077856}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1446942828165994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,14 +3801,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446942828165994}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: -0.75, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4366184842647768}
   - {fileID: 4585196948198540}
   m_Father: {fileID: 4470242664006288}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!33 &33319881124454990
 MeshFilter:
@@ -3474,9 +3827,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446942828165994}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23691377665826530
@@ -3490,14 +3851,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3518,6 +3881,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114823879634700136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3534,10 +3898,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23691377665826530}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -3549,11 +3914,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23691377665826530}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3564,6 +3930,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -3578,6 +3945,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchEyeModeTwo
         m_Mode: 1
         m_Arguments:
@@ -3589,6 +3957,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -3605,7 +3974,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1189483396901062}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1452816473892250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,12 +4006,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452816473892250}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 2.5}
   m_LocalScale: {x: 0.49999997, y: 1.4999999, z: 0.49999997}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4599030488019674}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33206405738349238
 MeshFilter:
@@ -3655,8 +4030,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452816473892250}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 0
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -3672,10 +4056,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3700,6 +4086,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1477341150898482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,12 +4112,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477341150898482}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4400569841263786}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23533774225220268
 MeshRenderer:
@@ -3743,10 +4131,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3771,6 +4161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102680669311657666
 TextMesh:
   serializedVersion: 3
@@ -3818,12 +4209,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482834023205984}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4249424012121154}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23105409565908506
 MeshRenderer:
@@ -3836,10 +4228,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3864,6 +4258,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102669663439340306
 TextMesh:
   serializedVersion: 3
@@ -3909,15 +4304,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490842286009320}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4826755087168800}
   - {fileID: 4400569841263786}
   - {fileID: 4370953122638232}
   m_Father: {fileID: 4507464606655048}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1539240329077856
 GameObject:
@@ -3945,12 +4341,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539240329077856}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4257614864960262}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33246082816446140
 MeshFilter:
@@ -3968,9 +4365,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539240329077856}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23984229688747498
@@ -3984,10 +4389,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4012,6 +4419,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1540158252224990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,14 +4447,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540158252224990}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 1.5, y: 0, z: -0.75}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4014206537404424}
   - {fileID: 4118081314805892}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!33 &33758479326807112
 MeshFilter:
@@ -4064,9 +4473,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540158252224990}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23096038449425536
@@ -4080,14 +4497,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4108,6 +4527,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114914876983688900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,10 +4544,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23096038449425536}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -4139,11 +4560,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23096038449425536}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4157,6 +4579,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewModeAR
         m_Mode: 1
         m_Arguments:
@@ -4168,6 +4591,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -4179,6 +4603,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchScene
         m_Mode: 5
         m_Arguments:
@@ -4195,7 +4620,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1324626194194082}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1540557132599666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,12 +4652,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540557132599666}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4310038363695298}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33368721451754570
 MeshFilter:
@@ -4245,9 +4676,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540557132599666}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23422753009871768
@@ -4261,10 +4700,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4289,6 +4730,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1564161543573910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4314,12 +4756,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564161543573910}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4853561876341290}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23056336173025206
 MeshRenderer:
@@ -4332,10 +4775,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4360,6 +4805,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102814650277706228
 TextMesh:
   serializedVersion: 3
@@ -4409,13 +4855,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565527956625972}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.275, y: 0.85, z: -0.375}
   m_LocalScale: {x: 0.5, y: 0.6, z: 0.24999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4133997374675858}
   m_Father: {fileID: 4848497887229884}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33458161200638018
 MeshFilter:
@@ -4433,9 +4880,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565527956625972}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23252298099369576
@@ -4449,14 +4904,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4477,6 +4934,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114488498488328240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4493,10 +4951,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23252298099369576}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -4508,11 +4967,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23252298099369576}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4523,6 +4983,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -4537,6 +4998,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: AddIPD
         m_Mode: 4
         m_Arguments:
@@ -4548,6 +5010,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateIPDText
         m_Mode: 1
         m_Arguments:
@@ -4564,7 +5027,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1568521838462576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,14 +5060,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568521838462576}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -1.5, y: 0, z: -0.75}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4090262574317730}
   - {fileID: 4307813831109594}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!33 &33982545301553186
 MeshFilter:
@@ -4617,9 +5086,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568521838462576}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23571762071385488
@@ -4633,14 +5110,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4661,6 +5140,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114947716064502290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4677,10 +5157,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23571762071385488}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -4692,11 +5173,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23571762071385488}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4710,6 +5192,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -4721,6 +5204,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -4737,7 +5221,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1685530450162444}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1586140746324256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,14 +5254,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586140746324256}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4734982305960474}
   - {fileID: 4489769067655478}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!33 &33899033519253946
 MeshFilter:
@@ -4790,9 +5280,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586140746324256}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23844726422891984
@@ -4806,14 +5304,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4834,6 +5334,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114083446989048144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4850,10 +5351,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23844726422891984}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -4865,11 +5367,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23844726422891984}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4880,6 +5383,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -4894,6 +5398,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize4
         m_Mode: 1
         m_Arguments:
@@ -4905,6 +5410,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -4921,7 +5427,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1185269716997590}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1586504097495806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4949,14 +5460,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586504097495806}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.60876137, z: 0, w: 0.7933534}
   m_LocalPosition: {x: -2, y: 0, z: -1.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4284708082040916}
   - {fileID: 4833001350778290}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
 --- !u!33 &33057503526817114
 MeshFilter:
@@ -4974,9 +5486,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586504097495806}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23317463240015986
@@ -4990,14 +5510,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5018,6 +5540,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114380256502339972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,10 +5557,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23317463240015986}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -5049,11 +5573,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23317463240015986}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5064,6 +5589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -5078,6 +5604,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize1
         m_Mode: 1
         m_Arguments:
@@ -5089,6 +5616,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -5105,7 +5633,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1540557132599666}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1604619836583216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,14 +5666,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604619836583216}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -1.5, y: 0, z: -0.75}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4616784246134682}
   - {fileID: 4289768940765176}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!33 &33520587923887326
 MeshFilter:
@@ -5158,9 +5692,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604619836583216}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23485485470492616
@@ -5174,14 +5716,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5202,6 +5746,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114861387902867248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5218,10 +5763,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23485485470492616}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -5233,11 +5779,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23485485470492616}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5248,6 +5795,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -5262,6 +5810,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize2
         m_Mode: 1
         m_Arguments:
@@ -5273,6 +5822,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -5289,7 +5839,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1989515242109716}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1605420212569642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,12 +5870,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605420212569642}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4310038363695298}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23622836148213472
 MeshRenderer:
@@ -5333,10 +5889,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5361,6 +5919,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102374893144128842
 TextMesh:
   serializedVersion: 3
@@ -5409,12 +5968,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607303610314118}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.5}
   m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4599030488019674}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33606924060135648
 MeshFilter:
@@ -5432,8 +5992,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607303610314118}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 0
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -5449,10 +6018,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5477,6 +6048,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1625828713020152
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,14 +6076,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625828713020152}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: -0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4414578627123672}
   - {fileID: 4154607970755812}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!33 &33194885263858142
 MeshFilter:
@@ -5529,9 +6102,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625828713020152}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23817318644248794
@@ -5545,14 +6126,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5573,6 +6156,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114724780547456048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5589,10 +6173,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23817318644248794}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -5604,11 +6189,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23817318644248794}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5619,6 +6205,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -5633,6 +6220,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize3
         m_Mode: 1
         m_Arguments:
@@ -5644,6 +6232,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -5660,7 +6249,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1989029897484800}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1646153235778540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,13 +6282,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646153235778540}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.2, z: -0.15}
   m_LocalScale: {x: 0.45, y: 0.3, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4004901378531304}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33975923093359612
 MeshFilter:
@@ -5712,9 +6307,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646153235778540}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23198496207230340
@@ -5728,14 +6331,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5756,6 +6361,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114729744106917528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5772,10 +6378,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23198496207230340}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -5787,11 +6394,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23198496207230340}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5802,6 +6410,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -5816,6 +6425,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -5827,6 +6437,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -5838,6 +6449,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -5854,7 +6466,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1675655551955934
 GameObject:
   m_ObjectHideFlags: 0
@@ -5880,12 +6497,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675655551955934}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.04, y: 0.06, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4848497887229884}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23770308717327826
 MeshRenderer:
@@ -5898,10 +6516,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5926,6 +6546,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102312144659161826
 TextMesh:
   serializedVersion: 3
@@ -5974,12 +6595,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685530450162444}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4845565089039770}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33394716131307218
 MeshFilter:
@@ -5997,9 +6619,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685530450162444}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23038235014817752
@@ -6013,10 +6643,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6041,6 +6673,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1685926947014700
 GameObject:
   m_ObjectHideFlags: 0
@@ -6066,12 +6699,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685926947014700}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4503977186049274}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23388139185672676
 MeshRenderer:
@@ -6084,10 +6718,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6112,6 +6748,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102150629339380400
 TextMesh:
   serializedVersion: 3
@@ -6159,12 +6796,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706295320127216}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4826755087168800}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23667889708846088
 MeshRenderer:
@@ -6177,10 +6815,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6205,6 +6845,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102210658724200016
 TextMesh:
   serializedVersion: 3
@@ -6252,12 +6893,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743854641359040}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4370953122638232}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23288264925218478
 MeshRenderer:
@@ -6270,10 +6912,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6298,6 +6942,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102203751762235456
 TextMesh:
   serializedVersion: 3
@@ -6343,14 +6988,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753140181226236}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4848497887229884}
   - {fileID: 4599030488019674}
   m_Father: {fileID: 4507464606655048}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757557392387664
 GameObject:
@@ -6377,12 +7023,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757557392387664}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4257614864960262}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23871441791625692
 MeshRenderer:
@@ -6395,10 +7042,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6423,6 +7072,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102866615479740676
 TextMesh:
   serializedVersion: 3
@@ -6468,9 +7118,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774701720425794}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4654950291744588}
   - {fileID: 4663018993641010}
@@ -6481,7 +7133,6 @@ Transform:
   - {fileID: 4930551918177452}
   - {fileID: 4660408913466510}
   m_Father: {fileID: 4507464606655048}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788743865431076
 GameObject:
@@ -6510,14 +7161,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788743865431076}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0.75, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4686213050298534}
   - {fileID: 4174022885059710}
   m_Father: {fileID: 4470242664006288}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!33 &33380449347302462
 MeshFilter:
@@ -6535,9 +7187,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788743865431076}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23815265210052996
@@ -6551,14 +7211,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6579,6 +7241,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114505339011568744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6595,10 +7258,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23815265210052996}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -6610,11 +7274,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23815265210052996}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6625,6 +7290,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -6639,6 +7305,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchEyeModeSingle
         m_Mode: 1
         m_Arguments:
@@ -6650,6 +7317,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -6666,7 +7334,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1981429334304366}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1814348228358340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6693,12 +7366,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814348228358340}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 2.5}
   m_LocalScale: {x: 0.49999997, y: 1.4999999, z: 0.49999997}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4599030488019674}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33474094228150922
 MeshFilter:
@@ -6716,8 +7390,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814348228358340}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 0
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -6733,10 +7416,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6761,6 +7446,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1838354905539948
 GameObject:
   m_ObjectHideFlags: 0
@@ -6784,15 +7470,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838354905539948}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4781540707400606}
   - {fileID: 4437626638087434}
   - {fileID: 4459559640381824}
   m_Father: {fileID: 4507464606655048}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845460565122906
 GameObject:
@@ -6819,12 +7506,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845460565122906}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4654950291744588}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23425625450673340
 MeshRenderer:
@@ -6837,10 +7525,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6865,6 +7555,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102248513916063236
 TextMesh:
   serializedVersion: 3
@@ -6912,12 +7603,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852343053696658}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4700488059217058}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23957699647837232
 MeshRenderer:
@@ -6930,10 +7622,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6958,6 +7652,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102653573810148568
 TextMesh:
   serializedVersion: 3
@@ -7007,14 +7702,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891557693895206}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4654679239275824}
   - {fileID: 4881653724810404}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33323592721848348
 MeshFilter:
@@ -7032,9 +7728,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891557693895206}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23753365403513850
@@ -7048,14 +7752,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7076,6 +7782,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114095299710499498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7092,10 +7799,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23753365403513850}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7107,11 +7815,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23753365403513850}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7125,6 +7834,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewModeMR
         m_Mode: 1
         m_Arguments:
@@ -7136,6 +7846,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -7147,6 +7858,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchScene
         m_Mode: 5
         m_Arguments:
@@ -7163,7 +7875,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1305264079579612}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1893082804050356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7187,9 +7904,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893082804050356}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4310038363695298}
   - {fileID: 4916982844051038}
@@ -7199,7 +7918,6 @@ Transform:
   - {fileID: 3455799314886419008}
   - {fileID: 4883945430263288}
   m_Father: {fileID: 4507464606655048}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904646119160132
 GameObject:
@@ -7228,14 +7946,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904646119160132}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.60876137, z: 0, w: 0.7933534}
   m_LocalPosition: {x: -2, y: 0, z: -1.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999996}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4108162940687996}
   - {fileID: 4068582747650660}
   m_Father: {fileID: 4410383159939070}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
 --- !u!33 &33254730435645284
 MeshFilter:
@@ -7253,9 +7972,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904646119160132}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23611277002838134
@@ -7269,14 +7996,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7297,6 +8026,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114031426956402144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7313,10 +8043,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23611277002838134}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7328,11 +8059,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23611277002838134}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7346,6 +8078,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -7357,6 +8090,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -7373,7 +8107,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1296617998282948}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1916828629553880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,13 +8140,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916828629553880}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.2, z: -0.15}
   m_LocalScale: {x: 0.45, y: 0.3, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4456040404110056}
   m_Father: {fileID: 4454555485519252}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33182573668410634
 MeshFilter:
@@ -7425,9 +8165,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916828629553880}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23433086065197166
@@ -7441,14 +8189,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7469,6 +8219,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114585142612978610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7485,10 +8236,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23433086065197166}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7500,11 +8252,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23433086065197166}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7515,6 +8268,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -7529,6 +8283,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SaveCurrentSetting
         m_Mode: 1
         m_Arguments:
@@ -7540,6 +8295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -7551,6 +8307,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -7567,7 +8324,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 0}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1981429334304366
 GameObject:
   m_ObjectHideFlags: 0
@@ -7594,12 +8356,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981429334304366}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4437626638087434}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33424924028071560
 MeshFilter:
@@ -7617,9 +8380,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981429334304366}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23838770256441136
@@ -7633,10 +8404,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7661,6 +8434,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1988674384789516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,14 +8462,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988674384789516}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0.8, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4695357957452406}
   - {fileID: 4542545604731728}
   m_Father: {fileID: 4454555485519252}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!33 &33444256305768684
 MeshFilter:
@@ -7713,9 +8488,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988674384789516}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23306049201675724
@@ -7729,14 +8512,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7757,6 +8542,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114466750101411946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7773,10 +8559,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23306049201675724}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7788,11 +8575,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 23306049201675724}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7803,6 +8591,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -7817,6 +8606,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchLaunchGameScene
         m_Mode: 6
         m_Arguments:
@@ -7828,6 +8618,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -7844,7 +8635,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 1281128404277168}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &1988701752181614
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,12 +8666,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988701752181614}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.06, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883945430263288}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23435574761842976
 MeshRenderer:
@@ -7888,10 +8685,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7916,6 +8715,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102401747082413308
 TextMesh:
   serializedVersion: 3
@@ -7964,12 +8764,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989029897484800}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4109902798637442}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33451594217197722
 MeshFilter:
@@ -7987,9 +8788,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989029897484800}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23904385511366390
@@ -8003,10 +8812,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8031,6 +8842,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1989515242109716
 GameObject:
   m_ObjectHideFlags: 0
@@ -8057,12 +8869,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989515242109716}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4916982844051038}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33835147673503884
 MeshFilter:
@@ -8080,9 +8893,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989515242109716}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23725768942266132
@@ -8096,10 +8917,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8124,6 +8947,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1994481374383074
 GameObject:
   m_ObjectHideFlags: 0
@@ -8149,12 +8973,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994481374383074}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4012132956456342}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23074070133452960
 MeshRenderer:
@@ -8167,10 +8992,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8195,6 +9022,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102610184966340944
 TextMesh:
   serializedVersion: 3
@@ -8242,9 +9070,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994550077985212}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4410383159939070}
   - {fileID: 4470242664006288}
@@ -8252,7 +9082,6 @@ Transform:
   - {fileID: 4454555485519252}
   - {fileID: 4839199073173396}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114326055719956696
 MonoBehaviour:
@@ -8271,7 +9100,7 @@ MonoBehaviour:
   ipdTextObj: {fileID: 102312144659161826}
 --- !u!95 &95154461760700192
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8284,10 +9113,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &644350345986553215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8314,12 +9145,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644350345986553215}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3455799314886419008}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &197786066392856068
 MeshFilter:
@@ -8337,9 +9169,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644350345986553215}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &468097837625015389
@@ -8353,10 +9193,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8381,6 +9223,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3221203181055920969
 GameObject:
   m_ObjectHideFlags: 0
@@ -8408,14 +9251,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3221203181055920969}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.60876137, z: 0, w: 0.7933534}
   m_LocalPosition: {x: 2, y: 0, z: -1.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3069974397905883686}
   - {fileID: 391042781508222169}
   m_Father: {fileID: 4839199073173396}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 75, z: 0}
 --- !u!33 &6842831403926748796
 MeshFilter:
@@ -8433,9 +9277,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3221203181055920969}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &3709671205491408195
@@ -8449,14 +9301,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8477,6 +9331,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8366603296235998053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8493,10 +9348,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3709671205491408195}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 78f6d8cc80554934ba283ba9656b1609,
+          m_ObjectArgument: {fileID: 2100000, guid: 5074ce60425a6d6489a9a3051e3c46e8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -8508,11 +9364,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3709671205491408195}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 10303, guid: 0000000000000000f000000000000000,
-            type: 0}
+          m_ObjectArgument: {fileID: 2100000, guid: 70ed83f988e89844ba4f8c5f862c2d84,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8523,6 +9380,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95154461760700192}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -8537,6 +9395,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SwitchViewSize6
         m_Mode: 1
         m_Arguments:
@@ -8548,6 +9407,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114326055719956696}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UpdateSelectFrame
         m_Mode: 1
         m_Arguments:
@@ -8564,7 +9424,12 @@ MonoBehaviour:
   onAnyClick:
     m_PersistentCalls:
       m_Calls: []
+  onKeepSelect:
+    m_PersistentCalls:
+      m_Calls: []
   selectFrame: {fileID: 644350345986553215}
+  isCallKeepSelectEvent: 0
+  keepSelectEventIntervalSec: 0
 --- !u!1 &4639553302763751695
 GameObject:
   m_ObjectHideFlags: 0
@@ -8590,12 +9455,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4639553302763751695}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3455799314886419008}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5227292946231974418
 MeshRenderer:
@@ -8608,10 +9474,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8636,6 +9504,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &4756234300686584801
 TextMesh:
   serializedVersion: 3
