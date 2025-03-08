@@ -24,5 +24,6 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.log
 .vs
 
