@@ -405,6 +405,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1490842286009320, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753140181226236, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774701720425794, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838354905539948, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893082804050356, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4507464606655048, guid: a2c4685d09c141c46a990cffd6bf7259, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -441,6 +461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: ViewSizeMenuIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155794163033302209, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
