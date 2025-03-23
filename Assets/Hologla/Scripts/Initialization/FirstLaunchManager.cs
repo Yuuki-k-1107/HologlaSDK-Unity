@@ -5,9 +5,12 @@ using UnityEngine;
 public class FirstLaunchManager : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private InitializationManager _initializationManager;
     void Start()
     {
-        
+        if(null == _animator) _animator = GetComponent<Animator>();
+        if(null == _initializationManager) _initializationManager = GetComponent<InitializationManager>();
+        MayShowInitMenu();
     }
 
     void Update()
@@ -15,25 +18,29 @@ public class FirstLaunchManager : MonoBehaviour
         
     }
 
-    void OnEnable()
-    {
-        MayShowInitMenu();
-    }
-
     public void MayShowInitMenu()
     {
-        var initial0 = PlayerPrefs.GetInt("initial0");
-        if(initial0 == 0)
+        // 実体験：PlayerPrefsのキーは大文字と小文字を区別するっぽいです。
+        // すなわち、"initial0"と"Initial0"は別物として扱われるようです。
+        // 今回は大文字の"Initial0"を用いようと思います。
+        var initial0 = PlayerPrefs.GetInt("Initial0");
+        Debug.Log(initial0);
+        if (0 == initial0)
         {
-            if(null != _animator)
+            if (null != _initializationManager)
             {
-                _animator.SetTrigger("ViewModeMenuIn");
+                _initializationManager.SetInitialization(true);
+            }
+            if (null != _animator)
+            {
+                _animator.SetTrigger("EyeModeMenuIn");
             }
         }
     }
 
     public void UnsetInitial0()
     {
-        PlayerPrefs.SetInt("initial0", 1);
+        Debug.Log("UnsetInitial0 called");
+        PlayerPrefs.SetInt("Initial0", 1);
     }
 }
