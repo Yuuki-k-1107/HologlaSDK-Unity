@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Hologla/Scenes/Attention.unity
+    guid: 2914d76ce8debb74083997f3207e701d
+  - enabled: 1
     path: Assets/Hologla/Scenes/LaunchScene.unity
     guid: 4816b307e55689a499c035beaf937ab0
   - enabled: 1
