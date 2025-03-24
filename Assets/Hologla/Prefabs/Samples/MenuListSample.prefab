@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 23905283378877314}
   - component: {fileID: 114453242711493540}
   m_Layer: 0
-  m_Name: BlockItem (1)
+  m_Name: Minus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2888,7 +2888,7 @@ GameObject:
   - component: {fileID: 23303809362855762}
   - component: {fileID: 114470014742873456}
   m_Layer: 0
-  m_Name: BlockItem (2)
+  m_Name: BlockItem_Decision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4291,7 +4291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454555485519252}
   m_Layer: 0
-  m_Name: "BlockListMenu\uFF14"
+  m_Name: BlockListMenu4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4830,7 +4830,7 @@ GameObject:
   - component: {fileID: 23252298099369576}
   - component: {fileID: 114488498488328240}
   m_Layer: 0
-  m_Name: BlockItem
+  m_Name: Plus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6221,7 +6221,7 @@ GameObject:
   - component: {fileID: 23198496207230340}
   - component: {fileID: 114729744106917528}
   m_Layer: 0
-  m_Name: BlockItem (2)
+  m_Name: BlockItem_Decision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8133,7 +8133,7 @@ GameObject:
   - component: {fileID: 23433086065197166}
   - component: {fileID: 114585142612978610}
   m_Layer: 0
-  m_Name: BlockItem (2)
+  m_Name: BlockItem_Init
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9371,7 +9371,7 @@ GameObject:
   - component: {fileID: 709452979997021911}
   - component: {fileID: 8911771291858628474}
   m_Layer: 0
-  m_Name: BlockItem (1)
+  m_Name: Minus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10049,7 +10049,7 @@ GameObject:
   - component: {fileID: 3936152069508238397}
   - component: {fileID: 5423920453792487869}
   m_Layer: 0
-  m_Name: BlockItem
+  m_Name: Plus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10546,7 +10546,7 @@ GameObject:
   - component: {fileID: 3003202809558207690}
   - component: {fileID: 3004668218703004459}
   m_Layer: 0
-  m_Name: BlockItemDecision_Skip
+  m_Name: BlockItem_Decision_Skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10945,7 +10945,7 @@ GameObject:
   - component: {fileID: 7789930568796707570}
   - component: {fileID: 3510312871597213641}
   m_Layer: 0
-  m_Name: BlockItemDecision_Init
+  m_Name: BlockItem_Decision_Init
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11150,7 +11150,7 @@ GameObject:
   - component: {fileID: 1212805441120972849}
   - component: {fileID: 4315189076290411019}
   m_Layer: 0
-  m_Name: BlockItem (2)_Init
+  m_Name: BlockItem_Decision_Init
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
