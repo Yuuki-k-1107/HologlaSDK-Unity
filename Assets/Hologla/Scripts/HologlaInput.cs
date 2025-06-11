@@ -89,8 +89,8 @@ namespace Hologla{
 			if( null == eventTrigger ){
 				eventTrigger = buttonObj.gameObject.AddComponent<EventTrigger>( );
 			}
-
-			entry = new EventTrigger.Entry( );
+            // 押したときのイベントを登録
+            entry = new EventTrigger.Entry( );
 			entry.eventID = EventTriggerType.PointerDown;
 			entry.callback.AddListener(onPress);
 			eventTrigger.triggers.Add(entry);

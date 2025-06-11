@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 using Hologla;
 using System.Collections.ObjectModel;
+using TMPro;
 
 public class DanglaMenuSample : MonoBehaviour {
 
@@ -27,10 +28,12 @@ public class DanglaMenuSample : MonoBehaviour {
 		{"_SingleEye",
 		"_TwoEye",}) ;
 	private static readonly ReadOnlyCollection<string> VIEW_SIZE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
-		{"_Small",
+		{"_Minimum",
+		"_Small",
 		"_Mid",
 		"_Big",
-		"_ExBig",}) ;
+		"_ExBig",
+		"_Maximum"}) ;
 	private const string GAME_LAUNCH_ITEM_NAME = "_Game" ;
 	private const string MENU_LAUNCH_ITEM_NAME = "_Menu" ;
 
@@ -64,7 +67,9 @@ public class DanglaMenuSample : MonoBehaviour {
 		ResetMenuRotation( );
 
 		UpdateSelectFrame( );
-		
+
+		LaunchGameScene();
+
 		return;
 	}
 	
@@ -141,6 +146,21 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
+	/// <summary>
+	/// IPD値表示テキストの更新。
+	/// IPDの調整時にイベント呼び出しを行う使用を想定している。
+	/// </summary>
+	/// <param name="textMesh">IPDの距離をText Mesh</param>
+	public void UpdateIPDText(TextMesh textMesh)
+	{
+        if (null == textMesh || null == hologlaManager)
+        {
+            return;
+        }
+        textMesh.text = string.Format("{0:.0}mm\nDecision", hologlaManager.InterpupillaryDistance);
+
+        return;
+    }
 
 	public void SwitchLaunchGameScene(bool isGameScene)
 	{
@@ -355,5 +375,14 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
-
+	
+	private void LaunchGameScene()
+	{
+		if(true == isLaunchGameScene && true == UserSettings.isLaunchGameScene)
+		{
+            isLaunchGameScene = false;
+			UserSettings.isLaunchGameScene = false;
+            SwitchScene("HelloDangla"); // ここをロードしたいシーンに変える
+        }
+	}
 }

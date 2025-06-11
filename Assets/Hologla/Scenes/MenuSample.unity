@@ -263,10 +263,95 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114453242711493540, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453242711493540, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DanglaMenuSample, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453242711493540, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1808542646}
+    - target: {fileID: 114453242711493540, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.TextMesh, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488498488328240, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488498488328240, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateIPDText
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488498488328240, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DanglaMenuSample, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488498488328240, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1808542646}
+    - target: {fileID: 114488498488328240, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.TextMesh, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4315189076290411019, guid: a2c4685d09c141c46a990cffd6bf7259,
         type: 3}
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: ViewSizeMenuIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423920453792487869, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423920453792487869, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DanglaMenuSample, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423920453792487869, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1553640513}
+    - target: {fileID: 5423920453792487869, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.TextMesh, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911771291858628474, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911771291858628474, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DanglaMenuSample, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911771291858628474, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1553640513}
+    - target: {fileID: 8911771291858628474, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.TextMesh, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9155794163033302209, guid: a2c4685d09c141c46a990cffd6bf7259,
         type: 3}
@@ -623,6 +708,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b287fcaa5a8856408cd1b7ca23e853d, type: 3}
+--- !u!102 &1553640513 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 7846612641995322447, guid: a2c4685d09c141c46a990cffd6bf7259,
+    type: 3}
+  m_PrefabInstance: {fileID: 416210956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575396172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -685,6 +776,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62288de32b1e5449ba002b7a0ae7dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!102 &1808542646 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 102312144659161826, guid: a2c4685d09c141c46a990cffd6bf7259,
+    type: 3}
+  m_PrefabInstance: {fileID: 416210956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1825793368
 LightingSettings:
   m_ObjectHideFlags: 0
