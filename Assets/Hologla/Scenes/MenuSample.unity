@@ -263,6 +263,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114031426956402144, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_IsInitializing
+      objectReference: {fileID: 0}
     - target: {fileID: 114453242711493540, guid: a2c4685d09c141c46a990cffd6bf7259,
         type: 3}
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -308,6 +313,26 @@ PrefabInstance:
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.TextMesh, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114753710008318434, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_IsInitializing
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834181410512306, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_IsInitializing
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947716064502290, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_IsInitializing
+      objectReference: {fileID: 0}
+    - target: {fileID: 819184136879045096, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_IsInitializing
+      objectReference: {fileID: 0}
     - target: {fileID: 4315189076290411019, guid: a2c4685d09c141c46a990cffd6bf7259,
         type: 3}
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
@@ -332,6 +357,36 @@ PrefabInstance:
         type: 3}
       propertyPath: onRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.TextMesh, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13052616
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9914449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350038068271545762, guid: a2c4685d09c141c46a990cffd6bf7259,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8911771291858628474, guid: a2c4685d09c141c46a990cffd6bf7259,
         type: 3}

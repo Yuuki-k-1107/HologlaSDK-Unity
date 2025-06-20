@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Hologla.HologlaCameraManager;
 
 public sealed class SelectDecisionBlockForList5 : SelectDecisionBlockAbstract
 {
@@ -12,10 +13,10 @@ public sealed class SelectDecisionBlockForList5 : SelectDecisionBlockAbstract
     private void OnEnable()
     {
         // 初期設定の時
-        if(true == _initializationManager.isInitializing)
+        if(true == _initializationManager.IsInitializing)
         {
-            // 単眼モードの時はIPD設定をスキップ
-            if (HologlaCameraManager.EyeMode.SingleEye == UserSettings.eyeMode)
+            // 1眼モードの時はIPD設定をスキップ
+            if (EyeMode.SingleEye == UserSettings.eyeMode)
             {
                 decisionBlockInit.SetActive(false);
                 decisionBlockNormal.SetActive(false);

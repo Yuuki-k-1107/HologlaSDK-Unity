@@ -9,10 +9,10 @@ MITライセンスになります。
 Assets/Hologla/Lisence.txtをご確認ください。
 
 ## AR機能の動作環境について
-Unity2019.x以降のバージョンを想定しています。 <br>
+Unity2022.x以降のバージョンを想定しています。 <br>
 基本的にARKit、またはARCoreを利用してiOS、Android端末にて動作させることを想定しているため、 <br>
 ARFoundation及びARKit、ARCore等のプラグインを使用します(PackageManager設定にて設定しています)。 <br>
-現在動作確認している最新バージョンは4.2.7です。 <br>
+現在動作確認している最新バージョンは5.1.6です。 <br>
 
 また、動作確認には対応している端末が必要です。
 #### iOS
@@ -32,9 +32,9 @@ https://developers.google.com/ar/devices
 
 2. UnityのProject SettingsからXR Plug-in Managementの項目を開きます。 <br>
 必要に応じて、iOSのタブのARKitのチェックボックス、AndroidのタブのARCoreのチェックボックスにチェックを入れます。 <br>
-(iOS、Andoridのどちらか片方しか利用しない場合は、利用する方のみチェックを入れる形でも問題ありません。) <br>
+(iOS、Androidのどちらか片方しか利用しない場合は、利用する方のみチェックを入れる形でも問題ありません。) <br>
 
-3. PackageManagerでの設定完了後、本SDKのunitypackageをインポートします。 <br>
+3. PackageManagerでの設定完了後、本SDKのUnityPackageをインポートします。 <br>
 
 4. Unityの上部メニューの[Hologla]から[Initialize Project]と選択し、実行します。 <br>
 ここまででプロジェクトの設定は完了です。 <br>

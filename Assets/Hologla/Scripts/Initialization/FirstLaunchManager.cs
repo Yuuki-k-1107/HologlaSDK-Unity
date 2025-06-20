@@ -1,7 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// åˆæœŸèµ·å‹•æ™‚ã«è‡ªå‹•çš„ã«åˆæœŸè¨­å®šã«é·ç§»ã™ã‚‹ãŸã‚ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã€‚
+/// MenuSampleã®MenuListSampleã«ã‚¢ã‚¿ãƒƒãƒã™ã‚‹ã€‚
+/// </summary>
 public class FirstLaunchManager : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
@@ -20,21 +24,19 @@ public class FirstLaunchManager : MonoBehaviour
 
     public void MayShowInitMenu()
     {
-        // À‘ÌŒ±FPlayerPrefs‚ÌƒL[‚Í‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚·‚é‚Á‚Û‚¢‚Å‚·B
-        // ‚·‚È‚í‚¿A"initial0"‚Æ"Initial0"‚Í•Ê•¨‚Æ‚µ‚Äˆµ‚í‚ê‚é‚æ‚¤‚Å‚·B
-        // ¡‰ñ‚Í‘å•¶š‚Ì"Initial0"‚ğ—p‚¢‚æ‚¤‚Æv‚¢‚Ü‚·B
+        // å®Ÿä½“é¨“ï¼šPlayerPrefsã®ã‚­ãƒ¼ã¯å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã™ã‚‹ã£ã½ã„ã§ã™ã€‚
+        // ã™ãªã‚ã¡ã€"initial0"ã¨"Initial0"ã¯åˆ¥ç‰©ã¨ã—ã¦æ‰±ã‚ã‚Œã‚‹ã‚ˆã†ã§ã™ã€‚
+        // ä»Šå›ã¯ã‚­ãƒ¼åã«å¤§æ–‡å­—ã®"Initial0"ã‚’ç”¨ã„ã‚ˆã†ã¨æ€ã„ã¾ã™ã€‚
         var initial0 = PlayerPrefs.GetInt("Initial0");
         Debug.Log(initial0);
-        if (0 == initial0)
+        if (0 != initial0) return;
+        if (null != _initializationManager)
         {
-            if (null != _initializationManager)
-            {
-                _initializationManager.SetInitialization(true);
-            }
-            if (null != _animator)
-            {
-                _animator.SetTrigger("EyeModeMenuIn");
-            }
+            _initializationManager.IsInitializing = true;
+        }
+        if (null != _animator)
+        {
+            _animator.SetTrigger("EyeModeMenuIn");
         }
     }
 

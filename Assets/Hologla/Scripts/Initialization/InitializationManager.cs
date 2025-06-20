@@ -1,22 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InitializationManager : MonoBehaviour
 {
-    public bool isInitializing = false;
-    void Start()
-    {
-        
-    }
+    public bool IsInitializing { get; set; }
 
-    void Update()
-    {
-        
-    }
-
-    public void SetInitialization(bool value)
-    {
-        isInitializing = value;
+    [Obsolete]
+    public void SetInitialization(bool value) { 
+        IsInitializing = value;
+        Debug.LogError("旧式のメソッドから初期化フラグを呼び出しています。IsInitializingプロパティをご利用ください。");
     }
 }
