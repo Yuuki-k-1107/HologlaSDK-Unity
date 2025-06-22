@@ -760,9 +760,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 224028611778591182, guid: 8b287fcaa5a8856408cd1b7ca23e853d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1237920934}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b287fcaa5a8856408cd1b7ca23e853d, type: 3}
+--- !u!1 &1237920933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237920934}
+  - component: {fileID: 1237920938}
+  - component: {fileID: 1237920937}
+  - component: {fileID: 1237920936}
+  - component: {fileID: 1237920935}
+  m_Layer: 0
+  m_Name: DanglaGIF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1237920934
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237920933}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1693519418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1237920935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237920933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b5e2a9913274d43a1e678b6ac98f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_originalWidth: 0
+  m_originalHeight: 0
+  m_fixOnUpdate: 0
+--- !u!114 &1237920936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237920933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a962ef61c26864486fed7b06ca2919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rawImage: {fileID: 1237920937}
+  m_imgAspectCtrl: {fileID: 1237920935}
+  m_filterMode: 0
+  m_wrapMode: 1
+  m_loadOnStart: 1
+  m_loadOnStartUrl: Dangla_Setting.gif
+  m_rotateOnLoading: 0
+  m_outputDebugLog: 0
+--- !u!114 &1237920937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237920933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: d32e32189b9f64b4fa4001032d624dce, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1237920938
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237920933}
+  m_CullTransparentMesh: 1
 --- !u!102 &1553640513 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 7846612641995322447, guid: a2c4685d09c141c46a990cffd6bf7259,
@@ -831,6 +944,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62288de32b1e5449ba002b7a0ae7dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1693519418 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224028611778591182, guid: 8b287fcaa5a8856408cd1b7ca23e853d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1105164773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!102 &1808542646 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 102312144659161826, guid: a2c4685d09c141c46a990cffd6bf7259,

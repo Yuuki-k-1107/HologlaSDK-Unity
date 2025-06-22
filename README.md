@@ -12,7 +12,7 @@ Assets/Hologla/Lisence.txtをご確認ください。
 Unity2022.x以降のバージョンを想定しています。 <br>
 基本的にARKit、またはARCoreを利用してiOS、Android端末にて動作させることを想定しているため、 <br>
 ARFoundation及びARKit、ARCore等のプラグインを使用します(PackageManager設定にて設定しています)。 <br>
-現在動作確認している最新バージョンは5.1.6です。 <br>
+現在動作確認している最新バージョンは5.1.1です。 <br>
 
 また、動作確認には対応している端末が必要です。
 #### iOS
