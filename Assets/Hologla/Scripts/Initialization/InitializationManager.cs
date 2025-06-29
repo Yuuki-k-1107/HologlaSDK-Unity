@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +10,6 @@ public class InitializationManager : MonoBehaviour
     [Obsolete]
     public void SetInitialization(bool value) { 
         IsInitializing = value;
-        Debug.LogError("‹Œ®‚Ìƒƒ\ƒbƒh‚©‚ç‰Šú‰»ƒtƒ‰ƒO‚ğŒÄ‚Ño‚µ‚Ä‚¢‚Ü‚·BIsInitializingƒvƒƒpƒeƒB‚ğ‚²—˜—p‚­‚¾‚³‚¢B");
+        Debug.LogError("æ—§å¼ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‹ã‚‰åˆæœŸåŒ–ãƒ•ãƒ©ã‚°ã‚’å‘¼ã³å‡ºã—ã¦ã„ã¾ã™ã€‚IsInitializingãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ã”åˆ©ç”¨ãã ã•ã„ã€‚");
     }
 }
