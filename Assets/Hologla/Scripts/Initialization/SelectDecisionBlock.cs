@@ -11,23 +11,18 @@ public abstract class SelectDecisionBlockAbstract : MonoBehaviour
     [SerializeField] protected GameObject decisionBlockNormal;
     [SerializeField] protected GameObject decisionBlockInit;
 }
+
+/// <summary>
+/// 初期設定用の遷移先を用意するためのクラスの実装である。
+/// 具体的には、InitializationManagerのIsInitializingプロパティを読みとって、その値に応じて遷移先を決定している。
+/// </summary>
 public class SelectDecisionBlock : SelectDecisionBlockAbstract
 {
-    //[SerializeField] private InitializationManager _initializationManager;
-    //[SerializeField] private GameObject decisionBlockNormal;
-    //[SerializeField] private GameObject decisionBlockInit;
     private void OnEnable()
     {
-        if(true == _initializationManager.IsInitializing)
-        {
-            decisionBlockInit.SetActive(true);
-            decisionBlockNormal.SetActive(false);
-        }
-        else
-        {
-            decisionBlockInit.SetActive(false);
-            decisionBlockInit.SetActive(true);
-        }
+        bool isInitializing = _initializationManager.IsInitializing;
+        decisionBlockInit.SetActive(isInitializing);
+        decisionBlockNormal.SetActive(!isInitializing);
     }
     void Start()
     {

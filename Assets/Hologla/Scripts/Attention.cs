@@ -9,7 +9,6 @@ public class Attention : MonoBehaviour
     [SerializeField] private float _waitTimer = 10.0f;
     [SerializeField] private string _nextScene;
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -17,7 +16,7 @@ public class Attention : MonoBehaviour
         _waitTimer -= Time.deltaTime;
         if (_waitTimer <= 0f)
         {
-            SceneManager.LoadScene(_nextScene);
+            LoadNextScene();
         }
 
     }
