@@ -7,9 +7,17 @@ using UnityEngine;
 /// </summary>
 public abstract class SelectDecisionBlockAbstract : MonoBehaviour
 {
-    [SerializeField] protected InitializationManager _initializationManager;
-    [SerializeField] protected GameObject decisionBlockNormal;
-    [SerializeField] protected GameObject decisionBlockInit;
+    [SerializeField]
+    [Tooltip("MenuListSampleについているInitializationManagerインスタンス。")]
+    protected InitializationManager _initializationManager;
+    
+    [SerializeField]
+    [Tooltip("トップメニューに戻るためのブロック。")]
+    protected GameObject decisionBlockNormal;
+    
+    [SerializeField]
+    [Tooltip("初期設定時に次のメニューに進むためのブロック。")]
+    protected GameObject decisionBlockInit;
 }
 
 /// <summary>
@@ -30,10 +38,5 @@ public class SelectDecisionBlock : SelectDecisionBlockAbstract
         {
             _initializationManager = transform.root.GetComponent<InitializationManager>();
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

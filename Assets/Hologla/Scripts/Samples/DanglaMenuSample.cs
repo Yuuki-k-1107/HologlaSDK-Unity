@@ -51,7 +51,6 @@ public class DanglaMenuSample : MonoBehaviour {
 	private bool isLaunchGameScene = false ;
 	private GazeInteractive[] gazeInteractiveArray ;
 
-	// Use this for initialization
 	void Start( )
 	{
 		isLaunchGameScene = UserSettings.isLaunchGameScene;
@@ -72,11 +71,6 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	private void Awake( )
 	{
@@ -93,7 +87,9 @@ public class DanglaMenuSample : MonoBehaviour {
 		return;
 	}
 
-	//各種メニュー項目の選択状態を更新する.
+	/// <summary>
+	/// 各種メニュー項目の選択状態を更新する.
+	/// </summary>
 	public void UpdateSelectFrame( )
 	{
 		foreach( GazeInteractive interactive in gazeInteractiveArray ){
@@ -103,7 +99,11 @@ public class DanglaMenuSample : MonoBehaviour {
 		return;
 	}
 
-	//設定項目の選択状態を判別する.
+	/// <summary>
+	/// 設定項目の選択状態を判別する.
+	/// </summary>
+	/// <param name="checkObject"></param>
+	/// <returns></returns>
 	private bool IsSelectMenuItem(GameObject checkObject)
 	{
 		List<string> itemSelectNameList ;
@@ -129,6 +129,10 @@ public class DanglaMenuSample : MonoBehaviour {
 		return false;
 	}
 
+	/// <summary>
+	/// シーン名を引数にとりシーンを切り替える。
+	/// </summary>
+	/// <param name="sceneName"></param>
 	public void SwitchScene(string sceneName)
 	{
 		SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
@@ -142,7 +146,7 @@ public class DanglaMenuSample : MonoBehaviour {
 		if( null == ipdTextObj || null == hologlaManager ){
 			return;
 		}
-		ipdTextObj.text = string.Format("{0:.0}mm", hologlaManager.InterpupillaryDistance);
+		ipdTextObj.text = string.Format("{0:.0}mm\nDecision", hologlaManager.InterpupillaryDistance);
 
 		return;
 	}

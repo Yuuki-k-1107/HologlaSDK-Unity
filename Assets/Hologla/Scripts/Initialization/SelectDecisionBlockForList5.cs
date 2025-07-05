@@ -6,34 +6,34 @@ using static Hologla.HologlaCameraManager;
 
 public sealed class SelectDecisionBlockForList5 : SelectDecisionBlockAbstract
 {
+    // これらは継承元のクラスで定義しているのでコメントアウト
     //[SerializeField] private InitializationManager _initializationManager;
     //[SerializeField] private GameObject decisionBlockNormal;
     //[SerializeField] private GameObject decisionBlockInit;
-    [SerializeField] private GameObject decisionBlockSkip;
+    [SerializeField]
+    [Tooltip("1眼モード時に表示するスキップブロック。")]
+    private GameObject decisionBlockSkip;
     private void OnEnable()
     {
-        // 初期設定の時
-        if(true == _initializationManager.IsInitializing)
+        decisionBlockInit.SetActive(false);
+        decisionBlockNormal.SetActive(false);
+        decisionBlockSkip.SetActive(false);
+        if (false == _initializationManager.IsInitializing)
+        { // 初期設定でなく直接設定を選択したとき
+            // トップメニューに戻るボタンを有効化する
+            decisionBlockNormal.SetActive(true);
+            return;
+        }
+        // 初期設定の場合は
+        if (EyeMode.SingleEye == UserSettings.eyeMode)
         {
-            // 1眼モードの時はIPD設定をスキップ
-            if (EyeMode.SingleEye == UserSettings.eyeMode)
-            {
-                decisionBlockInit.SetActive(false);
-                decisionBlockNormal.SetActive(false);
-                decisionBlockSkip.SetActive(true);
-            }
-            else
-            {
-                decisionBlockInit.SetActive(true);
-                decisionBlockNormal.SetActive(false);
-                decisionBlockSkip.SetActive(false);
-            }
+            // 1眼モードの時はIPD設定をスキップしAR/MR/VR設定を表示する。
+            decisionBlockSkip.SetActive(true);
         }
         else
         {
-            decisionBlockInit.SetActive(false);
-            decisionBlockNormal.SetActive(true);
-            decisionBlockSkip.SetActive(false);
+            // 2眼モードの時はIPD設定に遷移するブロックを表示する。
+            decisionBlockInit.SetActive(true);
         }
     }
     void Start()
@@ -42,10 +42,5 @@ public sealed class SelectDecisionBlockForList5 : SelectDecisionBlockAbstract
         {
             _initializationManager = transform.root.GetComponent<InitializationManager>();
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

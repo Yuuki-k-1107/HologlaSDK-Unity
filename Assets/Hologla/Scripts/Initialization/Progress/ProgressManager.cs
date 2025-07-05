@@ -5,16 +5,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 画面左上に表示される進捗度合いを表すUIを管理するクラス。
+/// 表示を更新したいときはインスペクターからSetProgress()メソッドを呼ぶ必要がある。
+/// </summary>
 public class ProgressManager : MonoBehaviour
 {
-    [SerializeField] private GameObject progressPrefab;
-    [SerializeField] private GameObject cameraCanvasesSingle;
-    [SerializeField] private HologlaCameraManager hologlaCameraManager;
-    [SerializeField] private GameObject[] cameraCanvasesDouble = new GameObject[2];
+    [Tooltip("進捗度合いを表すプレハブオブジェクト。")]
+    [SerializeField]
+    private GameObject progressPrefab;
+
+    [Tooltip("1眼モード用のカメラキャンバス。")]
+    [SerializeField]
+    private GameObject cameraCanvasesSingle;
+
+    [Tooltip("2眼モード用のカメラキャンバス。0番目に左のキャンバスをセットする。")]
+    [SerializeField]
+    private GameObject[] cameraCanvasesDouble = new GameObject[2];
+
+    [Tooltip("MenuListSampleにアタッチされているHologlaCameraManagerインスタンス。")]
+    [SerializeField]
+    private HologlaCameraManager hologlaCameraManager;
+
+    // 完了したステップの色（黒）
     private Color doneColor = new Color(0x20 / 255f, 0x20 / 255f, 0x20 / 255f, 1f);
+    // 現在のステップの色（赤）
     private Color progressColor = new Color(0xEA / 255f, 0x68 / 255f, 0x68 / 255f, 1f);
+    // まだ到達していないステップの色（グレー）
     private Color waitingColor = new Color(0x80 / 255f, 0x80 / 255f, 0x80 / 255f, 1f);
-    [SerializeField] private GameObject[] progressInstances = new GameObject[3];
+
+    [Tooltip("作成した初期設定UIのインスタンス")]
+    [SerializeField] // テスト用にインスペクターに表示させる。
+    private GameObject[] progressInstances = new GameObject[3];
+
+    // UIとして表示されるテキストメッセージ
     private readonly string[] progressMessages = new string[5]{
         "", // 番兵(ダミー)
         "Eyemode Setting",
@@ -33,7 +57,7 @@ public class ProgressManager : MonoBehaviour
         // 1眼用のUIをセット
         progressInstances[0] = Instantiate(progressPrefab, cameraCanvasesSingle.transform);
         // 2眼用のUIをセット
-        for(int i = 1; i < 3; i++)
+        for(int i = 1; i <= 2; i++)
         {
             progressInstances[i] = Instantiate(progressPrefab, cameraCanvasesDouble[i-1].transform);
             progressInstances[i].transform.localScale = new Vector3(.7f, .7f, 1f);
@@ -60,7 +84,7 @@ public class ProgressManager : MonoBehaviour
     /// 3. IPD設定(1眼モードはスキップ)
     /// 4. 完了画面
     /// </summary>
-    /// <param name="progress">進捗度合い（）</param>
+    /// <param name="progress">進捗度合い（ステップ1～4で指定する。なお、1眼モードでも完了画面は4で指定する。）</param>
     public void SetProgress(int progress)
     {
         if (progress <= 0 || progress >= 5){
@@ -74,13 +98,17 @@ public class ProgressManager : MonoBehaviour
         foreach(GameObject instance in progressInstances)
         {
             if (null == instance) continue;
-            int _progress = is2Eyes 
-                ? progress 
-                : ((progress >= 3) ? progress-1 : progress);
             Image[] progressImages = instance.GetComponentsInChildren<Image>();
             Text[] texts = instance.GetComponentsInChildren<Text>();
-            // 進捗テキストを更新
-            texts[0].text = $"{_progress}/{wholeSteps}";
+            // 進捗テキストを更新。ただし1眼かつステップ4の時は3/3と表示されるようにする。
+            if (false == is2Eyes && 4 == progress)
+            {
+                texts[0].text = "3/3";
+            }
+            else
+            {
+                texts[0].text = $"{progress}/{wholeSteps}";
+            }
             // 進捗メッセージ（今どのステップにいるか）を更新
             texts[1].text = progressMessages[progress];
             // 終わったステップを黒に
@@ -106,7 +134,7 @@ public class ProgressManager : MonoBehaviour
             }
             else
             { // 1眼モード
-                // 3つめのステップを表す円を「隠す」
+                // 3つめのステップを表す円を「隠し」、あたかも円が3つだけ見えるように調整する。
                 tempColor.a = 0;
                 progressImages[3].color = tempColor;
                 progressImages[2].rectTransform.anchoredPosition = new Vector2(75f, 45f);

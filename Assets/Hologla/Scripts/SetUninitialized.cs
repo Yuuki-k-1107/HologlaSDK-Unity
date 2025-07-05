@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class SetUninitialized : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         var initial0 = PlayerPrefs.GetInt("Initial0");
         Debug.Log($"現在のInitial0の値は{initial0}です。");
-#if UNITY_EDITOR || true
+#if UNITY_EDITOR || true // テスト用。
+        //#if UNITY_EDITOR
         PlayerPrefs.SetInt("Initial0", 0);
 #endif
     }
 
-    // Update is called once per frame
     void Update()
     {
         
