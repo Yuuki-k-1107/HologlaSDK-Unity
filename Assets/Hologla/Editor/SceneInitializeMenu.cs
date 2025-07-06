@@ -46,7 +46,7 @@ public class SceneInitializeMenu
 		if( AndroidSdkVersions.AndroidApiLevel24 > PlayerSettings.Android.minSdkVersion ){
 			PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel24;
 		}
-		//ARCore向けにVulkenを使用しないようにする.
+		//ARCore向けにVulkanを使用せず、代わりにOpenGLES3を使用するようにする.
 		if( true == PlayerSettings.GetGraphicsAPIs(BuildTarget.Android).Contains(UnityEngine.Rendering.GraphicsDeviceType.Vulkan) ) {
 			UnityEngine.Rendering.GraphicsDeviceType[] graphicsDeviceTypeArray = new UnityEngine.Rendering.GraphicsDeviceType[1] { UnityEngine.Rendering.GraphicsDeviceType.OpenGLES3 };
 			PlayerSettings.SetGraphicsAPIs(BuildTarget.Android, graphicsDeviceTypeArray);
@@ -66,7 +66,7 @@ public class SceneInitializeMenu
 	[MenuItem("Hologla/Initialize Scene")]
 	static void InitScene()
 	{
-		//デフォルトのMainCameraをDeactivate
+		//デフォルトのMainCameraをDeactivateする．
 		if (Camera.main != null)
 		{
 			Undo.RecordObject(Camera.main.gameObject, "Deactivate Camera");
