@@ -13,12 +13,19 @@ namespace Hologla{
 		LeftAndRightClick,
 	};
 
+	/// <summary>
+	/// 見つめる事で関数を呼び出す事ができるインタフェース。
+	/// </summary>
 	public interface IGazeInteract{
 		void OnSelect( );
 		void OnDeselect( );
 		void OnClick(ClickType clickType);
 	}
 
+	/// <summary>
+	/// HologlaInput
+	/// ブロックオブジェクトにアタッチする。
+	/// </summary>
 	public class GazeInteractive : MonoBehaviour, IGazeInteract{
 
 		// 視線中央のカーソルで選択された際に呼び出されるイベント.
@@ -42,6 +49,8 @@ namespace Hologla{
 
 		// 選択され続けている際にイベントを呼び出すかどうか.
 		[SerializeField]private bool isCallKeepSelectEvent = false;
+
+		// 
 		public bool IsCallKeepSelectEvent
 		{
 			get => isCallKeepSelectEvent;
@@ -72,7 +81,10 @@ namespace Hologla{
 			return;
 		}
 
-		public void OnClick(ClickType clickType)
+        /// <summary>
+		/// クリック（左右下部の三角形のエリアをタップ）したときにイベントを呼び起こすための関数である。
+		/// </summary>
+        public void OnClick(ClickType clickType)
 		{
 			switch( clickType ){
 				case ClickType.LeftClick:
@@ -90,6 +102,7 @@ namespace Hologla{
 			return;
 		}
 
+		
 		public void OnSelect( )
 		{
 			isSelect = true;

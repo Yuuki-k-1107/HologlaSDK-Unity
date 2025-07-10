@@ -4,21 +4,27 @@ using UnityEngine;
 
 
 namespace Hologla{
+	/// <summary>
+	/// Hologlaにおいて、視点で入力を行うためのスクリプト。
+	/// </summary>
 	public class GazeInput : MonoBehaviour {
 
 		[SerializeField]private GameObject gazeObject = null ;
 
-		[SerializeField]private GameObject cursorObject = null ;
-//		[Tooltip("")]
-		[SerializeField]private float defaultCursorDistance = 2.0f ;
+		[SerializeField]
+		private GameObject cursorObject = null ;
+
+		[Tooltip("目からカーソル（白い球）の距離（メートル）")]
+		[SerializeField]
+		private float defaultCursorDistanceMeter = 2.0f ;
 
 		// カーソルが衝突するレイヤーマスク.
 		[SerializeField]private LayerMask targetLayerMask = (int)0x7FFFFFFF;
-		[SerializeField]private float targetMaxDistance = 10.0f;
+        // カーソルが衝突する最大距離.
+        [SerializeField]private float targetMaxDistanceMeter = 10.0f;
 
 		public IGazeInteract currentSelectObject{ get; private set; } = null;
 
-		// Use this for initialization
 		void Start( )
 		{
 			if( null == gazeObject ){
@@ -28,14 +34,13 @@ namespace Hologla{
 			return;
 		}
 	
-		// Update is called once per frame
 		void Update( ){
 		
 			RaycastHit raycastHit ;
 			Vector3 cursorPos ;
-
-			cursorPos = gazeObject.transform.position + (gazeObject.transform.forward * defaultCursorDistance);
-			if( true == Physics.Raycast(gazeObject.transform.position, gazeObject.transform.forward, out raycastHit, targetMaxDistance, targetLayerMask) ){
+            // カーソル位置をdefaultCursorDistanceMeterで指定した距離前方に位置させる。
+            cursorPos = gazeObject.transform.position + (gazeObject.transform.forward * defaultCursorDistanceMeter);
+			if( true == Physics.Raycast(gazeObject.transform.position, gazeObject.transform.forward, out raycastHit, targetMaxDistanceMeter, targetLayerMask) ){
 				IGazeInteract gazeInteract ;
 
 				gazeInteract = raycastHit.collider.GetComponent<IGazeInteract>( );
@@ -61,8 +66,12 @@ namespace Hologla{
 			return;
 		}
 
-		//入力操作時に外から呼び出せる関数.
-		public void InputLeftEvent( )
+        //以下の関数群は入力操作時に外から呼び出せる関数.
+
+        /// <summary>
+        /// 左タップしたときに呼び出される関数を定義している。
+        /// </summary>
+        public void InputLeftEvent( )
 		{
 			if( null != currentSelectObject ){
 				currentSelectObject.OnClick(ClickType.LeftClick);
@@ -70,7 +79,10 @@ namespace Hologla{
 
 			return;
 		}
-		public void InputRightEvent( )
+        /// <summary>
+        /// 右タップしたときに呼び出される関数を定義している。
+        /// </summary>
+        public void InputRightEvent( )
 		{
 			if( null != currentSelectObject ){
 				currentSelectObject.OnClick(ClickType.RightClick);
@@ -78,6 +90,9 @@ namespace Hologla{
 
 			return;
 		}
+		/// <summary>
+		/// 左右同時にタップしたときに呼び出される関数を定義している。
+		/// </summary>
 		public void InputLeftAndRightEvent( )
 		{
 			if( null != currentSelectObject ){
@@ -87,6 +102,10 @@ namespace Hologla{
 			return;
 		}
 
+		/// <summary>
+		/// 何らかのオブジェクトが選択されているか？
+		/// </summary>
+		/// <returns>オブジェクトが選択されている場合は真。</returns>
 		public bool IsSelectObject( )
 		{
 			return (null != currentSelectObject);

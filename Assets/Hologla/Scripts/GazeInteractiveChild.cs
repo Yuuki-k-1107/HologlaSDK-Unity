@@ -7,7 +7,9 @@ using UnityEngine.Events;
 
 namespace Hologla{
 
-	// 親階層にGazeInteractiveコンポーネントがある場合、その各イベントを呼ぶ.
+	/// <summary>
+	/// 親階層にGazeInteractiveコンポーネントがある場合、その各イベントを呼ぶ.
+	/// </summary>
 	public class GazeInteractiveChild : MonoBehaviour, IGazeInteract
 	{
 		[SerializeField]private IGazeInteract parentGazeInteractive = null;

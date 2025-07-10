@@ -26,7 +26,9 @@ namespace Hologla{
 		{
 			//左右のボタンが同時に押された時を検知できるようにしておく.
 			if( null != leftButton ){
-				RegistButtonPressAndReleaseEvent(leftButton.gameObject, (data) =>
+				RegisterButtonPressAndReleaseEvent(leftButton.gameObject,
+				// --- OnPress（左ボタンが押されたときに呼ばれる）---
+				(data) =>
 				{
 					isPressLeftButton = true;
 					//右ボタン押下中に左ボタンが押下された場合.
@@ -41,14 +43,17 @@ namespace Hologla{
 						leftButton.interactable = true;
 					}
 				},
-				(data) =>
+                // --- OnRelease（左ボタンが離されたときに呼ばれる） ---
+                (data) =>
 				{
 					isPressLeftButton = false;
 					isCallOnPressLeftAndRight = false;
 				});
 			}
 			if( null != rightButton ){
-				RegistButtonPressAndReleaseEvent(rightButton.gameObject, (data) =>
+				RegisterButtonPressAndReleaseEvent(rightButton.gameObject,
+                // --- OnPress（右ボタンが押されたときに呼ばれる）---	
+                (data) =>
 				{
 					isPressRightButton = true;
 					//左ボタン押下中に右ボタンが押下された場合.
@@ -63,7 +68,8 @@ namespace Hologla{
 						rightButton.interactable = true;
 					}
 				},
-				(data) =>
+                // --- OnRelease（右ボタンが離されたときに呼ばれる） ---
+                (data) =>
 				{
 					isPressRightButton = false;
 					isCallOnPressLeftAndRight = false;
@@ -80,12 +86,13 @@ namespace Hologla{
 		}
 
 
-		private void RegistButtonPressAndReleaseEvent(GameObject buttonObj, UnityAction<BaseEventData> onPress, UnityAction<BaseEventData> onRelease)
+		private void RegisterButtonPressAndReleaseEvent(GameObject buttonObj, UnityAction<BaseEventData> onPress, UnityAction<BaseEventData> onRelease)
 		{
-			EventTrigger eventTrigger ;
-			EventTrigger.Entry entry ;
+			EventTrigger eventTrigger;
+			EventTrigger.Entry entry;
 
 			eventTrigger = buttonObj.gameObject.GetComponent<EventTrigger>( );
+			// なぜここで再びEventTriggerを取得しているのか？
 			if( null == eventTrigger ){
 				eventTrigger = buttonObj.gameObject.AddComponent<EventTrigger>( );
 			}
@@ -98,8 +105,8 @@ namespace Hologla{
 			entry = new EventTrigger.Entry( );
 			entry.eventID = EventTriggerType.PointerUp;
 			entry.callback.AddListener(onRelease);
-
 			eventTrigger.triggers.Add(entry);
+
 			entry = new EventTrigger.Entry( );
 			entry.eventID = EventTriggerType.PointerExit;
 			entry.callback.AddListener(onRelease);

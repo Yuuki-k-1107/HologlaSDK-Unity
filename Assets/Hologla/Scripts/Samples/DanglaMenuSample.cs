@@ -9,25 +9,34 @@ using TMPro;
 
 public class DanglaMenuSample : MonoBehaviour {
 
-/*	enum MenuItem{
-		MRMode,
-		VRMode,
-		ARMode,
-		IPDSetting,
-		IPDSettingMenu,
-		EyeModeSetting,
-		MultiEyeMode,
-		SingleEyeMode,
-	}*/
-
-	private static readonly ReadOnlyCollection<string> VIEW_MODE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
+    /*	enum MenuItem{
+            MRMode,
+            VRMode,
+            ARMode,
+            IPDSetting,
+            IPDSettingMenu,
+            EyeModeSetting,
+            MultiEyeMode,
+            SingleEyeMode,
+        }*/
+    /// <summary>
+    /// AR/VR/MRの表示モード.	
+    /// </summary>
+    private static readonly ReadOnlyCollection<string> VIEW_MODE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
 		{"_AR",
 		"_MR",
 		"_VR",}) ;
-	private static readonly ReadOnlyCollection<string> EYE_MODE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
+    /// <summary>
+    /// 1眼/2眼の表示モード.
+    /// </summary>
+    private static readonly ReadOnlyCollection<string> EYE_MODE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
 		{"_SingleEye",
 		"_TwoEye",}) ;
-	private static readonly ReadOnlyCollection<string> VIEW_SIZE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
+    /// <summary>
+    /// 表示領域のサイズ.
+	/// _Minimum
+    /// </summary>
+    private static readonly ReadOnlyCollection<string> VIEW_SIZE_ITEM_NAME = new ReadOnlyCollection<string>(new string[]
 		{"_Minimum",
 		"_Small",
 		"_Mid",
@@ -45,6 +54,8 @@ public class DanglaMenuSample : MonoBehaviour {
 	[SerializeField]private HologlaCameraManager hologlaManager = null ;
 	[SerializeField]private HologlaInput hologlaInput = null ;
 	[SerializeField]private TextMesh ipdTextObj = null ;
+	[Tooltip("LaunchSceneをGameにしているときに遷移する")]
+	[SerializeField]
 
 //	private MenuItem currentItem = MenuItem.MRMode ;
 
@@ -61,6 +72,7 @@ public class DanglaMenuSample : MonoBehaviour {
 		if( null == hologlaInput ){
 			hologlaInput = GameObject.FindObjectOfType<HologlaInput>( );
 		}
+		// メニューを真正面に表示させる処理を行う．
 		RegisterMenuTransReset( );
 		ResetMenuPosition( );
 		ResetMenuRotation( );
@@ -78,8 +90,12 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
-	
-	public void UrlUp(string url)
+
+    /// <summary>
+    /// URLを開く.
+    /// </summary>
+    /// <param name="url">URLリンク。</param>
+    public void UrlUp(string url)
 	{
 		// WWW.URLリンク
 		Application.OpenURL(url);
@@ -154,7 +170,7 @@ public class DanglaMenuSample : MonoBehaviour {
 	/// IPD値表示テキストの更新。
 	/// IPDの調整時にイベント呼び出しを行う使用を想定している。
 	/// </summary>
-	/// <param name="textMesh">IPDの距離をText Mesh</param>
+	/// <param name="textMesh">IPDの距離を表示するText Meshコンポーネント。</param>
 	public void UpdateIPDText(TextMesh textMesh)
 	{
         if (null == textMesh || null == hologlaManager)
@@ -173,7 +189,9 @@ public class DanglaMenuSample : MonoBehaviour {
 		return;
 	}
 
-	//現在のユーザー設定を保存する.
+	/// <summary>
+	/// 現在のユーザー設定を保存する.
+	/// </summary>
 	public void SaveCurrentSetting( )
 	{
 		UserSettings.isLaunchGameScene = isLaunchGameScene;
@@ -187,7 +205,9 @@ public class DanglaMenuSample : MonoBehaviour {
 		return;
 	}
 
-	//メニューオブジェクトの位置を視点正面位置にリセットする.
+	/// <summary>
+	/// メニューオブジェクトの位置を視点正面位置にリセットする.
+	/// </summary>
 	public void ResetMenuPosition( )
 	{
 		if( null != hologlaManager ){
@@ -199,8 +219,13 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
-	//メニューオブジェクトの向きを視点正面方向にリセットする.
-	public void ResetMenuRotation(bool isValidRoll = false)
+    /// <summary>
+    /// メニューオブジェクトの向きを視点正面方向にリセットする.
+    /// </summary>
+    /// <remarks>
+    /// HologlaManagerもしくはメインカメラの回転を参照して、メニューオブジェクトの向きをリセットします。</remarks>
+    /// <param name="isValidRoll">Z軸周りの回転を保持するか？</param>
+    public void ResetMenuRotation(bool isValidRoll = false)
 	{
 		Quaternion rotation ;
 
@@ -244,7 +269,7 @@ public class DanglaMenuSample : MonoBehaviour {
 	public void AddIPD(float addValue){if( null != hologlaManager ){hologlaManager.AddIPD(addValue);}}
 
 
-	#if false
+#if false
 	public void LeftClickEvent( )
 	{
 		Vector3 move ;
@@ -369,10 +394,12 @@ public class DanglaMenuSample : MonoBehaviour {
 
 		return;
 	}
-	#endif
+#endif
 
-
-	private void RegisterMenuTransReset( )
+    /// <summary>
+    /// 左ボタンを押したときにメニューの位置と回転をリセットする.
+    /// </summary>
+    private void RegisterMenuTransReset( )
 	{
 		hologlaInput.LeftButtonComp.onClick.AddListener(ResetMenuPosition);
 		hologlaInput.LeftButtonComp.onClick.AddListener(( ) => ResetMenuRotation(false));
@@ -380,6 +407,9 @@ public class DanglaMenuSample : MonoBehaviour {
 		return;
 	}
 	
+	/// <summary>
+	/// ゲームシーンから起動する設定を登録しているときにゲームシーンに飛ぶようにする。
+	/// </summary>
 	private void LaunchGameScene()
 	{
 		if(true == isLaunchGameScene && true == UserSettings.isLaunchGameScene)

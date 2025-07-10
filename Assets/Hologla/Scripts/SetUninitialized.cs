@@ -1,18 +1,18 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ‰Šúİ’è‚ğs‚¤ƒtƒ‰ƒO‚ğ—§‚Ä‚é‚½‚ß‚ÌƒXƒNƒŠƒvƒgB
+/// åˆæœŸè¨­å®šã‚’è¡Œã†ãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹ãŸã‚ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã€‚
 /// </summary>
 public class SetUninitialized : MonoBehaviour
 {
     void Start()
     {
         var initial0 = PlayerPrefs.GetInt("Initial0");
-        Debug.Log($"Œ»İ‚ÌInitial0‚Ì’l‚Í{initial0}‚Å‚·B");
-#if true || UNITY_EDITOR // ƒeƒXƒg—pB
-        //#if UNITY_EDITOR // –{”Ô‚Í‚±‚Á‚¿‚ğg‚¤B
+        Debug.Log($"ç¾åœ¨ã®Initial0ã®å€¤ã¯{initial0}ã§ã™ã€‚");
+#if true || UNITY_EDITOR // ãƒ†ã‚¹ãƒˆç”¨ã€‚
+        //#if UNITY_EDITOR // æœ¬ç•ªã¯ã“ã£ã¡ã‚’ä½¿ã†ã€‚
         PlayerPrefs.SetInt("Initial0", 0);
 #endif
     }
