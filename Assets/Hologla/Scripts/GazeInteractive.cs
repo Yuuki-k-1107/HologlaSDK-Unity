@@ -23,31 +23,31 @@ namespace Hologla{
 	}
 
 	/// <summary>
-	/// HologlaInput
+	/// HologlaInputの入力に応じて
 	/// ブロックオブジェクトにアタッチする。
 	/// </summary>
 	public class GazeInteractive : MonoBehaviour, IGazeInteract{
 
-		// 視線中央のカーソルで選択された際に呼び出されるイベント.
+		[Tooltip("視線中央のカーソルで選択された際に呼び出されるイベント.")]
 		[SerializeField]private UnityEvent onGazeSelect = new UnityEvent( );
-		// 視線中央のカーソルでの選択が解除された際に呼び出されるイベント.
-		[SerializeField]private UnityEvent onGazeDeselect = new UnityEvent( );
-		// 左ボタンがクリックされた際に呼び出されるイベント.
-		[SerializeField]private UnityEvent onLeftClick = new UnityEvent( );
-		// 右ボタンがクリックされた際に呼び出されるイベント.
-		[SerializeField]private UnityEvent onRightClick = new UnityEvent( );
-		// 左右同時に押された際に呼び出されるイベント.
-		[SerializeField]private UnityEvent onLeftAndRightClick = new UnityEvent( );
-		// 左右どちらかのボタンがクリックされた際に呼び出されるイベント.
-		[SerializeField]private UnityEvent onAnyClick = new UnityEvent( );
-		// 視線中央のカーソルで選択され続けている際に呼び出されるイベント.
+        [Tooltip("視線中央のカーソルでの選択が解除された際に呼び出されるイベント.")]
+        [SerializeField]private UnityEvent onGazeDeselect = new UnityEvent( );
+        [Tooltip("左ボタンがクリックされた際に呼び出されるイベント.")]
+        [SerializeField]private UnityEvent onLeftClick = new UnityEvent( );
+        [Tooltip("右ボタンがクリックされた際に呼び出されるイベント.")]
+        [SerializeField]private UnityEvent onRightClick = new UnityEvent( );
+        [Tooltip("左右同時に押された際に呼び出されるイベント.")]
+        [SerializeField]private UnityEvent onLeftAndRightClick = new UnityEvent( );
+        [Tooltip("左右どちらかのボタンがクリックされた際に呼び出されるイベント.")]
+        [SerializeField]private UnityEvent onAnyClick = new UnityEvent( );
+        [Tooltip("視線中央のカーソルで選択され続けている際に呼び出されるイベント.")]
 		[SerializeField]private UnityEvent onKeepSelect = new UnityEvent( );
 
-		// 選択中に表示されるフレーム用のオブジェクト.
+        [Tooltip("選択中に表示されるフレーム用のオブジェクト.")]
 		[SerializeField]private GameObject selectFrame = null;
 		public GameObject SelectFrame { get => selectFrame; set => selectFrame = value; }
 
-		// 選択され続けている際にイベントを呼び出すかどうか.
+        [Tooltip("選択され続けている際にイベントを呼び出すかどうか.")]
 		[SerializeField]private bool isCallKeepSelectEvent = false;
 
 		// 
@@ -69,13 +69,11 @@ namespace Hologla{
 		private bool isSelect = false;
 		private IEnumerator keepSelectEventCallMonitor = null;
 
-		// Use this for initialization
 		void Start( )
 		{
 			return;
 		}
 	
-		// Update is called once per frame
 		void Update( )
 		{
 			return;
@@ -102,7 +100,9 @@ namespace Hologla{
 			return;
 		}
 
-		
+		/// <summary>
+		/// 自分自身（のブロック）が選択されたときにイベントの呼び出しと凝視した時用のコルーチンをスタートさせるメソッド。
+		/// </summary>
 		public void OnSelect( )
 		{
 			isSelect = true;
@@ -146,8 +146,10 @@ namespace Hologla{
 
 			return;
 		}
-
-		private void EndKeepSelectEventMonitor( )
+        /// <summary>
+        /// 選択され続けている際に呼び出すイベントの監視終了処理.
+        /// </summary>
+        private void EndKeepSelectEventMonitor( )
 		{
 			if( null == keepSelectEventCallMonitor ){
 				return;

@@ -34,7 +34,7 @@ public class ProgressManager : MonoBehaviour
     // まだ到達していないステップの色（グレー）
     private Color waitingColor = new Color(0x80 / 255f, 0x80 / 255f, 0x80 / 255f, 1f);
 
-    [Tooltip("作成した初期設定UIのインスタンス")]
+    [Tooltip("作成した初期設定UIのインスタンス。インスペクター上にはここには基本何も参照を入れない。")]
     [SerializeField] // テスト用にインスペクターに表示させる。
     private GameObject[] progressInstances = new GameObject[3];
 

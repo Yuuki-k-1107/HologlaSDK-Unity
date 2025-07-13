@@ -7,10 +7,11 @@ using UnityEngine.Events;
 
 namespace Hologla{
 
-	/// <summary>
-	/// 親階層にGazeInteractiveコンポーネントがある場合、その各イベントを呼ぶ.
-	/// </summary>
-	public class GazeInteractiveChild : MonoBehaviour, IGazeInteract
+    /// <summary>
+    /// 親階層にGazeInteractiveコンポーネントがある場合、その各イベントを呼ぶ.
+    /// イベントを呼ぶための関数はIGazeInteractインターフェースとして取得して呼ばれる.
+    /// </summary>
+    public class GazeInteractiveChild : MonoBehaviour, IGazeInteract
 	{
 		[SerializeField]private IGazeInteract parentGazeInteractive = null;
 
@@ -23,7 +24,10 @@ namespace Hologla{
 			return;
 		}
 
-		public void OnClick(ClickType clickType)
+        /// <summary>
+		/// クリック（タップ）されたときに親のOnClick()を呼び出す.
+		/// </summary>
+        public void OnClick(ClickType clickType)
 		{
 			if( null != parentGazeInteractive ){
 				parentGazeInteractive.OnClick(clickType);
@@ -31,7 +35,10 @@ namespace Hologla{
 			return;
 		}
 
-		public void OnDeselect( )
+        /// <summary>
+        ///  選択が解除されたときに親のOnDeselect()を呼び出す.
+        /// </summary>
+        public void OnDeselect( )
 		{
 			if( null != parentGazeInteractive ){
 				parentGazeInteractive.OnDeselect( );
@@ -39,7 +46,10 @@ namespace Hologla{
 			return;
 		}
 
-		public void OnSelect( )
+        /// <summary>
+        /// 選択されたときに親のOnSelect()を呼び出す.
+        /// </summary>
+        public void OnSelect( )
 		{
 			if( null != parentGazeInteractive ){
 				parentGazeInteractive.OnSelect( );
