@@ -18,14 +18,12 @@ public class Attention : MonoBehaviour
 
     void Update()
     {
-
         //指定秒数を超えたら、メインシーンへ遷移
         _waitTimer -= Time.deltaTime;
         if (_waitTimer <= 0f)
         {
             LoadNextScene();
         }
-
     }
 
     /// <summary>

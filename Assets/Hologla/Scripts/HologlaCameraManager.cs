@@ -113,12 +113,13 @@ namespace Hologla
 		// Use this for initialization
 		void Start( )
 		{
+            // Start/Awakeテスト用。
+            Debug.Log("Start/Awakeテスト用。Start Called");
 			//一部Awakeだと適用されない設定があるので、Start側でも再設定しておく.
 			SwitchViewMode(currentViewMode);
 			SwitchEyeMode(currentEyeMode);
 			ApplyIPD(interpupillaryDistance);
 			SwitchViewSize(currentViewSize);
-
 			UpdateArOcclution( );
 
 			return;
@@ -132,8 +133,9 @@ namespace Hologla
 
 		private void Awake( )
 		{
-			//デフォルトで自動スリープを無効化しておく.
-			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            Debug.Log("Start/Awakeテスト用。Awake Called");
+            //デフォルトで自動スリープを無効化しておく.
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
 			//子となるカメラを一度全て無効にしておく.
 			Camera[] childCameraArray ;
@@ -208,7 +210,8 @@ namespace Hologla
 		//AR/MR/VRの切り替え.
 		public void SwitchViewMode(ViewMode viewMode)
 		{
-			if( ViewMode.AR == viewMode ){
+			Debug.Log("Start/Awakeテスト用。SwitchViewMode");
+            if ( ViewMode.AR == viewMode ){
 				SwitchBackgroundVisible(false);
 				SwitchARCameraValid(true);
 				SwitchRealCollisionValid(true);
@@ -226,7 +229,7 @@ namespace Hologla
 
 			prevViewMode = currentViewMode;
 			currentViewMode = viewMode;
-			// ViewModeが切り替わった場合はARオクルージョンの常態も更新しておく.
+			// ViewModeが切り替わった場合はARオクルージョンの状態も更新しておく.
 			UpdateArOcclution( );
 
 			return;
@@ -241,7 +244,8 @@ namespace Hologla
 		//1眼/2眼の切り替え.
 		public void SwitchEyeMode(EyeMode eyeMode)
 		{
-			if( EyeMode.TwoEyes == eyeMode ){
+            Debug.Log("SwitchEyeMode");
+            if ( EyeMode.TwoEyes == eyeMode ){
 				singleCamera.enabled = false;
 				leftEyeCamera.enabled = true;
 				rightEyeCamera.enabled = true;
@@ -265,7 +269,9 @@ namespace Hologla
 		//瞳孔間距離の設定.
 		public void ApplyIPD(float ipd)
 		{
-			float metor2milli = 0.001f ;
+			// Start/Awakeテスト用。
+            Debug.Log("ApplyIPD");
+            float metor2milli = 0.001f ;
 
 			leftEyeCamera.transform.localPosition = Vector3.left * (ipd * 0.5f) * metor2milli;
 			rightEyeCamera.transform.localPosition = Vector3.right * (ipd * 0.5f) * metor2milli;
@@ -279,14 +285,15 @@ namespace Hologla
 		public void AddIPD(float addValue)
 		{
 			ApplyIPD(interpupillaryDistance + addValue);
-
 			return;
 		}
 
 		//表示領域サイズの切り替え.
 		public void SwitchViewSize(ViewSize viewSize)
 		{
-			Vector2 useViewportSize ;
+            // Start/Awakeテスト用。
+            Debug.Log("SwitchViewSize");
+            Vector2 useViewportSize ;
 
 			useViewportSize = UserSettings.viewportSizeList[(int)viewSize];
 
